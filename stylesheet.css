@@ -1,0 +1,90 @@
+/* 
+    This CSS file and the website itself are in an experimental stage.   
+    Nonetheless, this website will be constantly improved and maintained
+    and will hopefully be somewhat stable in the next weeks.
+*/
+
+body {
+    background-color: oldlace;
+    color: #FFFFFF;
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+.codeblock {
+    background-color: lavender;
+    color: darkblue;
+    width: 564px;
+    padding-left: 5px;
+    padding-bottom: 2px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 2px #000000;
+}
+
+.left{
+    color: red;
+}
+
+.right{
+    color: limegreen;
+}
+
+.diffblock {
+    background-color: lavender;
+    color: darkblue;
+    width: 640px;
+    padding-left: 5px;
+    padding-bottom: 2px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 2px #000000;
+}
+
+
+#header {
+    background-color: papayawhip;
+}
+
+#navigation {
+    float: left;
+    list-style: none;
+}
+
+#content {
+    background-color: beige;
+    height: auto;
+    margin-left: 20px;
+    width: 80%;
+    float: left;
+}
+
+#footer{
+    background-color: burlywood;
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: #000000;
+}
+
+p {
+    color: steelblue;
+    font-family: Times New Roman;
+}
+
+a:hover, li:hover {
+    color: black;
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+span {
+    color: red;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}

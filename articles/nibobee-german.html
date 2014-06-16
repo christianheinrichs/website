@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Getting the NIBObee library to work on Linux</title>
-        <link rel="stylesheet" type="text/css" href="../stylesheet.css" />
+        <link rel="stylesheet" type="text/css" href="http://christianheinrichs.github.io/stylesheet.css" />
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
     </head>
     <body>
@@ -117,8 +117,8 @@
                     </code>
                 </div>
                 <p>
-                Try to compile the program by typing <span color="red">make</span><br>
-                But, what just happened? The console now shows us:
+                    Try to compile the program by typing <span>make</span><br>
+                    But, what just happened? The console now shows us:
                 </p>
                 <div class="codeblock">
                     <code>
@@ -135,8 +135,8 @@
                 <p>
                     Don't worry. This is completely normal and I will now explain what just happened.<br>
                     The makefile in this folder uses relative paths instead of absolute paths.<br>
-                    As you can see, the problem occurs with the relative paths, seen here as dots: <span color="red">../../</span><br>
-                    Thus, I have modified the makefile to take care of that problem: Download it <a href="#">here</a> and replace the default makefile.<br>
+                    As you can see, the problem occurs with the relative paths, seen here as dots: <span>../../</span><br>
+                    Thus, I have modified the makefile to take care of that problem: Download it <a href="https://gist.github.com/christianheinrichs/a8cbbeb299c7f3a79b6a/download">here</a> and replace the default makefile.<br>
                 </p>
                 <p>
                     Looking at a diff, you can see the changes:
@@ -144,64 +144,64 @@
                 <div class="diffblock">
                     <code>
                         1d0<br>
-                        < <br>
+                        &lt; <br>
                         6,7c5,6<br>
                         <span class="left">
-                            < LIBDIR = ../../../lib<br>
-                            < HEXDIR = ../../../hex<br>
+                            &lt; LIBDIR = ../../../lib<br>
+                            &lt; HEXDIR = ../../../hex<br>
                             ---<br>
                         </span>
                         <span class="right">
-                        > LIBDIR = /opt/nibobeelib/lib<br>
-                        > HEXDIR = /opt/nibobeelib/hex<br>
+                        &gt; LIBDIR = /opt/nibobeelib/lib<br>
+                        &gt; HEXDIR = /opt/nibobeelib/hex<br>
                         </span>
                         9,10c8,9<br>
                         <span class="left">
-                            < LIBDIR = ../../../lib/$(PLATFORM)<br>
-                            < HEXDIR = ../../../hex/$(PLATFORM)<br>
+                            &lt; LIBDIR = ../../../lib/$(PLATFORM)<br>
+                            &lt; HEXDIR = ../../../hex/$(PLATFORM)<br>
                             ---<br>
                         </span>
                         <span class="right">
-                            > LIBDIR = /opt/nibobeelib/lib/$(PLATFORM)<br>
-                            > HEXDIR = /opt/nibobeelib/hex/$(PLATFORM)<br>
+                            &gt; LIBDIR = /opt/nibobeelib/lib/$(PLATFORM)<br>
+                            &gt; HEXDIR = /opt/nibobeelib/hex/$(PLATFORM)<br>
                         </span>
                             13,14c12,13<br>
                         <span class="left">
-                            < include ../../config-$(PLATFORM).mk<br>
-                            < include ../../version.mk<br>
+                            &lt; include ../../config-$(PLATFORM).mk<br>
+                            &lt; include ../../version.mk<br>
                             ---<br>
                         </span>
                         <span class="right">
-                            > include /opt/nibobeelib/src/config-$(PLATFORM).mk<br>
-                            > include /opt/nibobeelib/src/version.mk<br>
+                            &gt; include /opt/nibobeelib/src/config-$(PLATFORM).mk<br>
+                            &gt; include /opt/nibobeelib/src/version.mk<br>
                         </span>
                             19d17<br>
-                        <span class="left"><</span> <br>
+                        <span class="left">&lt;</span> <br>
                         26d23<br>
-                        <span class="left"><</span> <br>
+                        <span class="left">&lt;</span> <br>
                         28c25<br>
                         <span class="left">
-                            < CFLAGS += -Os -ffunction-sections -DAVR -I../.. -mmcu=$(DEVICE) -std=c99<br>
+                            &lt; CFLAGS += -Os -ffunction-sections -DAVR -I../.. -mmcu=$(DEVICE) -std=c99<br>
                             ---<br>
                         </span>
                         <span class="right">
-                            > CFLAGS += -Os -ffunction-sections -DAVR -I /opt/nibobeelib/src -mmcu=$(DEVICE) -std=c99<br>
+                            &gt; CFLAGS += -Os -ffunction-sections -DAVR -I /opt/nibobeelib/src -mmcu=$(DEVICE) -std=c99<br>
                         </span>
                         37c34<br>
                         <span class="left">
-                            < LIBS = -lnibobee_base -lnibobee_utils<br>
+                            &lt; LIBS = -lnibobee_base -lnibobee_utils<br>
                             ---<br>
                         </span>
                         <span class="right">
-                            > LIBS = /opt/nibobeelib/lib/libnibobee_base.a /opt/nibobeelib/lib/libnibobee_utils.a<br>
+                            &gt; LIBS = /opt/nibobeelib/lib/libnibobee_base.a /opt/nibobeelib/lib/libnibobee_utils.a<br>
                         </span>
                             108c105<br>
                         <span class="left">
-                            <   rm -f *.d *.o *~ *.elf $(TARGET).hex $(TARGET).lss $(NIBO_OBJS)<br>
+                            &lt;   rm -f *.d *.o *~ *.elf $(TARGET).hex $(TARGET).lss $(NIBO_OBJS)<br>
                             ---<br>
                         </span>
                         <span class="right">
-                            >   rm -f *.d *.o *~ *.elf $(TARGET).hex $(TARGET).lss $(TARGET).xhex $(NIBO_OBJS)
+                            &gt;   rm -f *.d *.o *~ *.elf $(TARGET).hex $(TARGET).lss $(TARGET).xhex $(NIBO_OBJS)
                         </span>
                     </code>
                 </div>
@@ -229,7 +229,7 @@
                     </code>
                 </div>
                 <p>
-                    Now, download the script here and put it into the "calibration" folder or copy and paste the following code into a file called calibrate.sh,<br>
+                    Now, download the script <a href="https://gist.github.com/christianheinrichs/ab750c916ef11d42d5de/download">here</a> and put it into the "calibration" folder or copy and paste the following code into a file called calibrate.sh,<br>
                     which should be saved in the just mentioned folder "calibration":
                 </p>
                 <div class="codeblock">
@@ -300,10 +300,9 @@
                     Thanks to nicai systems for creating the NIBObee robot and writing such good tutorials!
                 </p>
                 <p>
-                    Written by Christian Heinrichs - Last update: 06/13/2014
+                    Written by Christian Heinrichs - Last update: 06/16/2014
                 </p>
                 <a href="#top">Go to beginning of this page</a>
-            </div>
         </div>
         <div id="footer">
             <h1>Hosted by GitHub pages</h1>

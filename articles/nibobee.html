@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Getting the NIBObee library to work on Linux</title>
-        <link rel="stylesheet" type="text/css" href="../stylesheet.css" />
+        <link rel="stylesheet" type="text/css" href="http://christianheinrichs.github.io/stylesheet.css" />
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
     </head>
     <body>
@@ -144,64 +144,64 @@
                 <div class="diffblock">
                     <code>
                         1d0<br>
-                        < <br>
+                        &lt; <br>
                         6,7c5,6<br>
                         <span class="left">
-                            < LIBDIR = ../../../lib<br>
-                            < HEXDIR = ../../../hex<br>
+                            &lt; LIBDIR = ../../../lib<br>
+                            &lt; HEXDIR = ../../../hex<br>
                             ---<br>
                         </span>
                         <span class="right">
-                        > LIBDIR = /opt/nibobeelib/lib<br>
-                        > HEXDIR = /opt/nibobeelib/hex<br>
+                        &gt; LIBDIR = /opt/nibobeelib/lib<br>
+                        &gt; HEXDIR = /opt/nibobeelib/hex<br>
                         </span>
                         9,10c8,9<br>
                         <span class="left">
-                            < LIBDIR = ../../../lib/$(PLATFORM)<br>
-                            < HEXDIR = ../../../hex/$(PLATFORM)<br>
+                            &lt; LIBDIR = ../../../lib/$(PLATFORM)<br>
+                            &lt; HEXDIR = ../../../hex/$(PLATFORM)<br>
                             ---<br>
                         </span>
                         <span class="right">
-                            > LIBDIR = /opt/nibobeelib/lib/$(PLATFORM)<br>
-                            > HEXDIR = /opt/nibobeelib/hex/$(PLATFORM)<br>
+                            &gt; LIBDIR = /opt/nibobeelib/lib/$(PLATFORM)<br>
+                            &gt; HEXDIR = /opt/nibobeelib/hex/$(PLATFORM)<br>
                         </span>
                             13,14c12,13<br>
                         <span class="left">
-                            < include ../../config-$(PLATFORM).mk<br>
-                            < include ../../version.mk<br>
+                            &lt; include ../../config-$(PLATFORM).mk<br>
+                            &lt; include ../../version.mk<br>
                             ---<br>
                         </span>
                         <span class="right">
-                            > include /opt/nibobeelib/src/config-$(PLATFORM).mk<br>
-                            > include /opt/nibobeelib/src/version.mk<br>
+                            &gt; include /opt/nibobeelib/src/config-$(PLATFORM).mk<br>
+                            &gt; include /opt/nibobeelib/src/version.mk<br>
                         </span>
                             19d17<br>
-                        <span class="left"><</span> <br>
+                        <span class="left">&lt;</span> <br>
                         26d23<br>
-                        <span class="left"><</span> <br>
+                        <span class="left">&lt;</span> <br>
                         28c25<br>
                         <span class="left">
-                            < CFLAGS += -Os -ffunction-sections -DAVR -I../.. -mmcu=$(DEVICE) -std=c99<br>
+                            &lt; CFLAGS += -Os -ffunction-sections -DAVR -I../.. -mmcu=$(DEVICE) -std=c99<br>
                             ---<br>
                         </span>
                         <span class="right">
-                            > CFLAGS += -Os -ffunction-sections -DAVR -I /opt/nibobeelib/src -mmcu=$(DEVICE) -std=c99<br>
+                            &gt; CFLAGS += -Os -ffunction-sections -DAVR -I /opt/nibobeelib/src -mmcu=$(DEVICE) -std=c99<br>
                         </span>
                         37c34<br>
                         <span class="left">
-                            < LIBS = -lnibobee_base -lnibobee_utils<br>
+                            &lt; LIBS = -lnibobee_base -lnibobee_utils<br>
                             ---<br>
                         </span>
                         <span class="right">
-                            > LIBS = /opt/nibobeelib/lib/libnibobee_base.a /opt/nibobeelib/lib/libnibobee_utils.a<br>
+                            &gt; LIBS = /opt/nibobeelib/lib/libnibobee_base.a /opt/nibobeelib/lib/libnibobee_utils.a<br>
                         </span>
                             108c105<br>
                         <span class="left">
-                            <   rm -f *.d *.o *~ *.elf $(TARGET).hex $(TARGET).lss $(NIBO_OBJS)<br>
+                            &lt;   rm -f *.d *.o *~ *.elf $(TARGET).hex $(TARGET).lss $(NIBO_OBJS)<br>
                             ---<br>
                         </span>
                         <span class="right">
-                            >   rm -f *.d *.o *~ *.elf $(TARGET).hex $(TARGET).lss $(TARGET).xhex $(NIBO_OBJS)
+                            &gt;   rm -f *.d *.o *~ *.elf $(TARGET).hex $(TARGET).lss $(TARGET).xhex $(NIBO_OBJS)
                         </span>
                     </code>
                 </div>

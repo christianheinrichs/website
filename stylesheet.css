@@ -7,13 +7,58 @@
 body {
     background-color: oldlace;
     color: #FFFFFF;
-    font-family: Impact, Charcoal, sans-serif;
+    font-family: Arial;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: #000000;
+}
+
+li {
+    color: steelblue;
+    font-family: sans;
+    list-style: none;
+    margin-left: 4px;
+}
+
+p {
+    color: steelblue;
+    font-family: serif;
+}
+
+span {
+    color: red;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+a:hover, li:hover {
+    color: black;
+    background-color: antiquewhite;
+    cursor: pointer;
 }
 
 .codeblock {
     background-color: lavender;
     color: darkblue;
     width: 564px;
+    padding-left: 5px;
+    padding-bottom: 2px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 2px #000000;
+}
+
+.diffblock {
+    background-color: lavender;
+    color: darkblue;
+    width: 640px;
     padding-left: 5px;
     padding-bottom: 2px;
     border-radius: 4px;
@@ -28,16 +73,14 @@ body {
     color: limegreen;
 }
 
-.diffblock {
+.command {
     background-color: lavender;
     color: darkblue;
-    width: 640px;
-    padding-left: 5px;
-    padding-bottom: 2px;
+    margin-left: 2px;
+    padding: 2px;
     border-radius: 4px;
     box-shadow: 0px 0px 4px 2px #000000;
 }
-
 
 #header {
     background-color: papayawhip;
@@ -45,6 +88,9 @@ body {
 
 #navigation {
     float: left;
+}
+
+#navigation ul li {
     list-style: none;
 }
 
@@ -52,8 +98,17 @@ body {
     background-color: beige;
     height: auto;
     margin-left: 20px;
-    width: 80%;
+    width: 86%;
     float: left;
+}
+
+#content p {
+    color: darkolivegreen;
+}
+
+#content ul li {
+    margin-left: 30px;
+    list-style: square;
 }
 
 #footer{
@@ -61,36 +116,9 @@ body {
     clear: both;
 }
 
-a {
-    text-decoration: none;
-}
-
-h1 {
-    color: #000000;
-}
-
-p {
-    color: steelblue;
-    font-family: Times New Roman;
-}
-
-a:hover, li:hover {
-    color: black;
-    background-color: antiquewhite;
-    cursor: pointer;
-}
-
-span {
-    color: red;
-}
-
-li {
-    color: steelblue;
-    font-family: Times New Roman;
-    margin-left: 30px;
-}
-
-ul {
-    margin: 0px;
-    padding: 0px;
+#warning {
+    background-color: black;
+    color: yellow;
+    width: 810px;
+    border: 2px dotted yellow;
 }

@@ -6,28 +6,28 @@
 
 body {
     background-color: oldlace;
-    color: #FFFFFF;
-    font-family: Arial;
+    color: green;
 }
 
 a {
+    color: teal;
+    font-family: Arial;
     text-decoration: none;
 }
 
 h1 {
     color: #000000;
+    font-family: Arial;
 }
 
 li {
     color: steelblue;
-    font-family: sans;
     list-style: none;
     margin-left: 4px;
 }
 
 p {
     color: steelblue;
-    font-family: serif;
 }
 
 span {
@@ -119,6 +119,8 @@ a:hover, li:hover {
 #warning {
     background-color: black;
     color: yellow;
-    width: 810px;
+    font-family: Arial;
+    padding-left: 4px;
+    width: 870px;
     border: 2px dotted yellow;
 }

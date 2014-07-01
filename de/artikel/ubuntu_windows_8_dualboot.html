@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ubuntu/Windows 8.1 Dualboot auf einem Toshiba Satellite L870-177 einrichten</title>
+        <link rel="stylesheet" type="text/css" href="http://christianheinrichs.github.io/stylesheet.css" />
+        <link rel="icon" type="image/png" href="http://christianheinrichs.github.io/favicon.png" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    </head>
+    <body>
+        <div id="header">
+            <h1>~christianheinrichs.github.io</h1>
+            <a href="http://christianheinrichs.github.io/de/index.html">de</a> / <a href="http://christianheinrichs.github.io/index.html">en</a>
+        </div>
+        <div id="navigation">
+            <h1>Navigation</h1>
+            <ul>
+                <li>
+                    <a href="http://christianheinrichs.github.io/de/index.html">Home</a>
+                </li>
+                <li>
+                    <a href="http://christianheinrichs.github.io/de/artikel.html">Artikel</a>
+                </li>
+                <li>
+                    <a href="http://christianheinrichs.github.io/de/projekte.html">Projekte</a>
+                </li>
+                <li>
+                    <a href="http://christianheinrichs.github.io/de/accounts.html">Meine Accounts</a>
+                </li>
+                <li>
+                    <a href="http://christianheinrichs.github.io/de/kontakt.html">Kontakt</a>
+                </li>
+                <li>
+                    <a href="http://christianheinrichs.github.io/de/about.html">Über diese website</a>
+                </li>
+            </ul>
+        </div>
+        <div id="content">
+            <h1>
+                Ubuntu/Windows 8.1 Dualboot auf einem Toshiba Satellite L870-177 einrichten
+            </h1>
+                <p>
+                    Vorraussetzungen:<br>
+                    - Ubuntu Installationsmedium (DVD oder USB) - Hier wurde eine Ubuntu 14.04 LTS Trusty Tahr x64 DVD verwendet<br>
+                    - Windows Installationsmedium (DVD oder USB) - Hier wurde eine Windows 8.1 x64 DSP SB DVD verwendet
+                </p>
+                <p>
+                    Letztes Jahr und bis vor Kurzem hatte ich allerlei Probleme mit dem Einrichten einer funktionierenden Dualboot-Konfiguration auf diesem Laptop und deswegen habe ich dieses Tutorial geschrieben.
+                </p>
+                <p>
+                    Zuerst laden Sie das ISO-Abbild auf <a href="http://www.ubuntu.com/download/desktop">Ubuntu.com</a> runter. Brennen Sie es auf eine DVD und machen Sie ein Backup all Ihrer wichtigen Dateien.<br>
+                    Entfernen Sie alle Wechseldatenträger oder Sie könnten während des Vorgangs Daten verlieren.<br>
+                    Legen Sie die DVD ein, entfernen Sie das Ethernet-Kabel von Ihrem Laptop und schalten Sie alle Internetverbindungen Ihres Laptops aus.
+                </p>
+                <p>
+                    Wenn Sie das Toshiba Logo sehen, drücken Sie wiederholt F12 bis das Bootmenü erscheint.<br>
+                    Booten Sie von Ihrem DVD-Laufwerk. Das System wird anschließend die DVD booten und Sie müssen "Try Ubuntu without installing it first" auswählen.<br>
+                    Dies ist der Live-CD Modus, von dem aus Sie jetzt Ihre Festplatte formatieren werden.<br>
+                    Klicken Sie auf das Dash-Logo oben links, geben Sie terminal ein und drücken ENTER.<br>
+                    Um mehr Übersicht zu haben, empfehle ich Ihnen das Terminalfenster zu maximieren, also tuen Sie das bitte.<br>
+                    Drücken Sie nun STRG+T und Sie haben 2 Tabs in Ihrem Terminal. Klicken Sie auf den ersten Tab und tippen:
+                </p>
+                <div class="codeblock">
+                    <code>
+                        sudo dd if=/dev/zero of=/dev/sda bs=4096
+                    </code>
+                </div><br>
+                <div id="warning">
+                    WARNUNG:<br>
+                    DIESER VORGANG WIRD ALLE DATEN AUF IHRER FESTPLATTE VOLLSTÄNDIG MIT NULLEN ÜBERSCHREIBEN.<br>
+                    WIE VORHER ERWÄHNT, SICHERN SIE IHRE DATEN BEVOR SIE DIES TUN!
+                </div>
+                <p>
+                    Dieser Vorgang könnte eine Weile dauern und ich nehme an, dass Sie 750 GB auf Ihrer Toshiba Festplatte haben. Es dauert etwas über 2 Stunden.<br>
+                    Falls Sie den Fortschritt von dd prüfen möchten, ist dies der Moment an dem der zweite Terminaltab  hilfreich ist. Klicken Sie drauf und tippen:
+                </p>
+                <div class="codeblock">
+                    <code>
+                        ps -aux | grep dd
+                    </code>
+                </div>
+                <p>
+                    Finden Sie die PID des sudo dd Prozesses (in der zweiten Reihe) heraus und geben folgendes ein:
+                </p>
+                <div class="codeblock">
+                    <code>
+                        sudo kill -USR1 ENTER_PID_HERE
+                    </code>
+                </div>
+                <p>
+                    Dieser Befehl sendet ein unterbrechendes USR1 Signal an das dd Programm, welches anschließend seinen Fortschritt preisgibt, also wechseln Sie zum ersten Tab und Sie werden sehen wie viele Gigabyte in wie vielen Sekunden überschrieben wurden.
+                </p>
+                <p>
+                    Wenn der Vorgang beendet ist, erhalten Sie eine Nachricht von dd, dass kein Speicher mehr auf dem Gerät verfügbar ist und 750 GB geschrieben worden sind.<br>
+                    Holen Sie Ihre Windows 8/8.1 DVD oder ein ähnliches Installationsmedium, klicken Sie auf die Schaltfläche oben rechts und klicken auf Herunterfahren... - Neustarten.<br>
+                    Sie werden die Nachricht „Please remove installation media and close tray (if any) then press ENTER“ sehen.<br>
+                    Die DVD wird automatisch ausgeworfen, also tuen Sie Ihre Ubuntu DVD zurück in die Hülle und legen die Windows DVD ein.<br>
+                    Schliessen Sie das CD-Fach, drücken Sie ENTER und dann nochmals wiederholt F12.
+                </p>
+                <p>
+                    Dieses Mal jedoch geht es nicht um die Bootoptionen, also wählen Sie die letzte Option „Enter setup“.<br>
+                    Navigieren Sie zum Reiter „Security“, ändern SecureBoot auf „Enabled“ und speichern Sie mit F10.<br>
+                    Nun startet das System neu und bootet von der Windows DVD.
+                </p>
+                <p>
+                    Beim ersten Bildschirm, klicken Sie einfach auf „Weiter“ und im zweiten auf „Jetzt installieren“.<br>
+                    Sie müssen jetzt wohl Ihren Windows Lizenzschlüssel/Produktschlüssel eingeben.<br>
+                    Wählen Sie die Option „Benutzerdefiniert: Nur Windows installieren (fortgeschritten)“<br>
+                    Sie werden nun die gesamte Festplatte sehen, welche eine NTFS-Größe von 698GB haben sollte.<br>
+                    Das ist offentsichtlich Ihre Festplatte, also klicken Sie einfach auf „Weiter“. Keine weiteren Schritte sind hier erforderlich.<br>
+                    Wenn die Installation von Windows beendet ist und alles vernünftig konfiguriert wurde, sollte es nach 10 Sekunden neustarten.
+                </p>
+                <p>
+                    Nun sollte Windows gestartet sein. Werfen Sie die Windows DVD aus und legen Sie die Ubuntu DVD wieder ein.
+                </p>
+                <p>
+                    Öffnen Sie die Systemsteuerung, klicken auf „System & Sicherheit“, dann „Verwaltung“ und starten die Datenträgerbereinigung.<br>
+                    Nachdem diese beendet ist, starten Sie das „Laufwerke optimieren und defragmentieren“ Programm.<br>
+                    Gehen Sie in die „Datenträgerverwaltung“ von Windows und Sie werden Ihre Festplatte C: sehen.<br>
+                    Rechtsklicken Sie diese und wählen „Volume verkleinern“. Anschließend geben Sie die Menge ein, welche Sie für die Linux-Installation wollen.<br>
+                    Ich habe 100 GB gewählt, also währen das 102400 MB. Nun wiederholen Sie die Datenträgerbereinigungs- und Defragmentierungsprozedur.<br>
+                    Diese sollte nur eine Minute dauern, weil das System sauber ist. Wenn Sie bereit sind, starten Sie mit der Ubuntu DVD im Fach neu und gehen in das Menü mit F12.
+                </p>
+                <p>
+                    Gehen Sie nun wieder ins System Setup, navigieren dann zum „Security“ Reiter und setzen Secureboot auf Disabled.<br>
+                    Dieser Schritt ist sehr wichtig, wird jedoch später erklärt, also drücken Sie F10 und speichern. Drücken Sie den F12-Knopf nochmals wiederholt und booten von DVD.<br>
+                    Nun erschein das Linux-Menü. Dieses Mal wählen Sie natürlich „Install Ubuntu“.
+                </p>
+                <p>
+                    Beim Willkommensbildschirm klicken Sie einfach auf „Weiter“, nachdem Sie Ihre Sprache ausgewählt haben.<br>
+                    Beim nächsten Bildschirm klicken Sie wieder auf „Weiter“. Nun sollten Sie den „Art der Installation“ Dialog sehen, also wählen Sie „Etwas anderes machen“.<br>
+                    Sie werden nun eine Liste aller Partitionen auf Ihren jetzigen System sehen.<br>
+                    Auf diesem System waren 2 NTFS-Partitionen, eine EFI-Partition und freier Speicher von 102400 MB aufgelistet.<br>
+                    Rechtsklicken Sie den freichen Speicher, welchen Sie vorher auf Windows vorbereitet haben und geben Sie die Anzahl der Megabytes Ihres RAM ein.<br>
+                    Es wird höchstwahrscheinlich 8GB sein, also geben Sie 8192 MB ein. Wechseln Sie den Partitionstyp auf swap und klicken OK.<br>
+                    Eine Swap-Partition wurden soeben kreiert. Rechtsklicken Sie den Rest dieses freichen Speichers und wählen ext4 Dateisystem aus.<br>
+                    Klicken Sie auf Hauptverzeichnis und wählen / . Wenn Sie sicher sind, dass Sie die zwei Partitionen korrekt zugewiesen haben, klicken Sie „Weiter“ um Ubuntu zu installieren.<br>
+                    Gehen Sie alle Dialoge durch, geben Sie Ihren Hostname, Benutzernamen, Zeiteinstellungen etc. ein und in etwa 15 Minuten ist die Installation fertig.
+                </p>
+                <p>
+                    Falls alles nach Plan lief, sollte Ihr System nun neu starten und das GRUB Menü erscheinen.<br>
+                    Sie haben nun ein voll funktionsfähiges Dualboot-System und können das Ethernet-Kabel wieder einstecken.<br>
+                    Natürlich sollten Sie sowohl Linux als auch Windows zuerst aktualisieren, bevor Sie im Internet surfen.
+                </p>
+                <p>
+                    Nun ein letztes Wort bezüglich der Secureboot-Problematik.
+                </p>
+                <p>
+                    Schalten Sie Secureboot nicht wieder ein oder Windows verändert den Bootloader von Ubuntu (GRUB) und Sie werden nur in der Lage sein, Windows zu starten.<br>
+                    Ich bin mir nicht sicher warum es auf diesem Laptop passiert und habe verschiedene Lösungen ausprobiert um Ubuntu mit eingeschaltetem Secureboot zu installieren, keine davon führte jedoch zum Erfolg.<br>
+                    Es gab mehrere Berichte von Leuten, die Probleme mit Linux/Windows 8 Dualbootinstallationen haben,<br>
+                    was sehr wahrscheinlich etwas mit UEFI und dem Secureboot Feature zu tun hat.
+                <p>
+                    Verfasst von Christian Heinrichs - Letzte Aktualisierung: 22.06.2014
+                </p>
+                <a href="#top">An den Anfang dieser Seite zurückkehren</a>
+        </div>
+        <div id="footer">
+            <h1>
+                Gehosted von <a href="https://pages.github.com">GitHub pages</a>
+            </h1>
+        </div>
+    </body>
+</html>

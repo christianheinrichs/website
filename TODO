@@ -1,0 +1,2 @@
+- Get rid of the massive <br> tag use. Look for „white-space: pre-line;“ approaches.
+  In contrary to pre-wrap, the <pre> element formatting gets ignored with pre-line

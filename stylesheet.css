@@ -15,6 +15,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: brown;
+}
+
 h1 {
     color: #000000;
     font-family: Arial;
@@ -37,12 +41,6 @@ span {
 ul {
     margin: 0px;
     padding: 0px;
-}
-
-a:hover, li:hover {
-    color: black;
-    background-color: antiquewhite;
-    cursor: pointer;
 }
 
 .codeblock {
@@ -84,6 +82,18 @@ a:hover, li:hover {
 
 #header {
     background-color: papayawhip;
+}
+
+#navigation a:hover {
+    color: black;
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+#navigation li:hover {
+    color: black;
+    background-color: antiquewhite;
+    cursor: pointer;
 }
 
 #navigation {

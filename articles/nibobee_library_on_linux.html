@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Getting the NIBObee library to work on Linux</title>
+        <link rel="stylesheet" type="text/css" href="../stylesheet.css" />
+        <link rel="icon" type="image/png" href="../favicon.png" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    </head>
+    <body>
+        <div id="header">
+            <h1>~christianheinrichs.github.io</h1>
+            <a href="http://christianheinrichs.github.io/de/index.html">de</a> / <a href="http://christianheinrichs.github.io/index.html">en</a>
+        </div>
+        <div id="navigation">
+            <ul>
+                <li>
+                    <a href="http://christianheinrichs.github.io/index.html">Home</a>
+                </li>
+                <li>
+                    <a href="http://christianheinrichs.github.io/articles.html">Articles</a>
+                </li>
+                <li>
+                    <a href="http://christianheinrichs.github.io/projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="http://christianheinrichs.github.io/accounts.html">My accounts</a>
+                </li>
+                <li>
+                    <a href="http://christianheinrichs.github.io/contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="http://christianheinrichs.github.io/about.html">About this website</a>
+                </li>
+            </ul>
+        </div>
+        <div id="content">
+            <h1>
+                Getting the NIBObee library to work on Linux
+            </h1>
+            <p>
+                I simply wrote this tutorial, because I didn't find any NIBObee library installation tutorial for Linux.<br>
+                The system I am using here is Ubuntu 14.04 LTS Trusty Tahr. If you use Debian, you should get along well with this tutorial.<br>
+                If you have bought a NIBObee robot, you most likely got it with a CD.<br>
+                The only relevant folder you will need for this is "linux".
+            </p>
+            <p>
+                Open the root directory of the CD-ROM and look at the content.
+                You will see 5 tar archives containing 4 programs and the NIBObee library.
+            </p>
+            <p>
+                Now you have at least 2 options:<br>
+                - Install the 4 programs <a href="http://www.nongnu.org/avrdude/">avrdude</a>, <a href="http://www.nongnu.org/avr-libc/">avr-libc</a>, <a href="https://www.gnu.org/software/binutils/">binutils</a> and <a href="https://www.gnu.org/software/gcc/">gcc</a> from the tar archives by unpacking and compiling them<br>
+                - Download and installation of the programs with package management software like <a href="https://wiki.debian.org/apt-get">apt-get</a>, <a href="https://www.archlinux.org/pacman/">pacman</a> or <a href="http://yum.baseurl.org/">yum</a><br><br>
+                
+                Out of comfortability I recommend using the second option. So type:<br>
+            </p>
+                <div class="codeblock">
+                    <code>
+                        sudo apt-get install avrdude avr-libc binutils gcc
+                    </code>
+                </div>
+                <p>
+                    After you have done that, you have still some work to do.
+                    First, we need to make a project directory for our NIBObee projects.<br>
+                    Here we will create this folder on the desktop with:<br>
+                </p>
+                <div class="codeblock">
+                    <code>
+                        mkdir ~/Desktop/nibobee-projects
+                    </code>
+                </div>
+                <p>
+                    Assuming you are using the CD, type the following commands to change into the CD-ROM directory and then copy the "nibobeelib" tar file to your newly created directory:<br>
+                </p>
+                <div class="codeblock">
+                    <code>
+                        cd /media/$USER/NIBObee/linux/<br>
+                        cp nibobeelib-20110603.tgz ~/Desktop/nibobee-projects/
+                    </code>
+                </div>
+                <p>
+                    Now, we can go back into the projects folder and extract the .tgz archive:
+                </p>
+                <div class="codeblock">
+                    <code>
+                        cd ~/Desktop/nibobee-projects<br>
+                        tar xvf $(ls | grep nibobeelib)
+                    </code>
+                </div>
+                <p>
+                    We are also stuck at another problem without even realizing it.<br>
+                    The makers of the CD packaged the include directory for Linux differently as they did for Windows.<br>
+                    The include directory is in fact there! But it is located in the src folder and called nibobee instead of include.<br>
+                    But don't worry, this problem will get solved in a few moments.
+                </p>
+                <p>
+                    If you now check the directory, you will find the folders doc, hex, lib and src. And the .tgz file.
+                </p>
+                    <ul>
+                        <li>
+                            doc contains documentation on the various functions of the NIBObee library. If you want to study the NIBObee library in more detail, you should definitely check it out!<br>
+                        </li>
+                        <li>
+                            hex contains interesting precompiled .hex files which you can directly transfer to your robot<br>
+                        </li>
+                        <li>
+                            lib contains the library files<br>
+                        </li>
+                        <li>
+                            src contains the source code, include files, tutorial programs and much more
+                        </li>
+                    </ul>
+                <p>
+                    This is how I installed the NIBObee library:
+                </p>
+                <div class="codeblock">
+                    <code>
+                        sudo mkdir /opt/nibobeelib/<br>
+                        sudo mv doc hex lib src /opt/nibobeelib/
+                    </code>
+                </div>
+                <p>
+                    Now you have all files you need, nicely organized in the /opt/ folder of your Linux distribution.<br>
+                    Let's copy over a program from the /opt/nibobeelib/ folder and change into it:
+                </p>
+                <div class="codeblock">
+                    <code>
+                        cp -r /opt/nibobeelib/src/tutorial/program1 .<br>
+                        cd program1
+                    </code>
+                </div>
+                <p>
+                    Try to compile the program by typing <code class="command">make</code> .<br>
+                    But, what just happened? The console now shows us:
+                </p>
+                <div class="codeblock">
+                    <code>
+                        Makefile:13: ../../config-m16-15.mk: No such file or directory<br>
+                        Makefile:14: ../../version.mk: No such file or directory<br>
+                        Makefile:114: program1.d: No such file or directory<br>
+                        set -e; avr-gcc -MM -Os -ffunction-sections -DAVR -I../.. -mmcu= -std=c99 -DF_CPU= -DVERSION="\"\"" -D_NIBOBEE_ program1.c \<br>
+                            | sed 's#\(program1\)\.o[ :]*#\1.o program1.d : #g' > program1.d ; \<br>
+                            [ -s program1.d ] || rm -f program1.d<br>
+                        avr-gcc: error: missing argument to ‘-mmcu=’<br>
+                        make: *** No rule to make target `../../version.mk'.  Stop.<br>
+                    </code>
+                </div>
+                <p>
+                    Don't worry. This is completely normal and I will now explain what just happened.<br>
+                    The Makefile in this folder uses relative paths instead of absolute paths.<br>
+                    As you can see, the problem occurs with the relative paths, seen here as dots: <span>../../</span><br>
+                    Thus, I have modified the Makefile to take care of that problem: Download it <a href="https://gist.github.com/christianheinrichs/a8cbbeb299c7f3a79b6a/download">here</a> and replace the default Makefile.<br>
+                </p>
+                <p>
+                    Looking at the diff file, you can see the changes:
+                </p>
+                <div class="diffblock">
+                    <code>
+                        1d0<br>
+                        &lt; <br>
+                        6,7c5,6<br>
+                        <span class="left">
+                            &lt; LIBDIR = ../../../lib<br>
+                            &lt; HEXDIR = ../../../hex<br>
+                            ---<br>
+                        </span>
+                        <span class="right">
+                        &gt; LIBDIR = /opt/nibobeelib/lib<br>
+                        &gt; HEXDIR = /opt/nibobeelib/hex<br>
+                        </span>
+                        9,10c8,9<br>
+                        <span class="left">
+                            &lt; LIBDIR = ../../../lib/$(PLATFORM)<br>
+                            &lt; HEXDIR = ../../../hex/$(PLATFORM)<br>
+                            ---<br>
+                        </span>
+                        <span class="right">
+                            &gt; LIBDIR = /opt/nibobeelib/lib/$(PLATFORM)<br>
+                            &gt; HEXDIR = /opt/nibobeelib/hex/$(PLATFORM)<br>
+                        </span>
+                            13,14c12,13<br>
+                        <span class="left">
+                            &lt; include ../../config-$(PLATFORM).mk<br>
+                            &lt; include ../../version.mk<br>
+                            ---<br>
+                        </span>
+                        <span class="right">
+                            &gt; include /opt/nibobeelib/src/config-$(PLATFORM).mk<br>
+                            &gt; include /opt/nibobeelib/src/version.mk<br>
+                        </span>
+                            19d17<br>
+                        <span class="left">&lt;</span> <br>
+                        26d23<br>
+                        <span class="left">&lt;</span> <br>
+                        28c25<br>
+                        <span class="left">
+                            &lt; CFLAGS += -Os -ffunction-sections -DAVR -I../.. -mmcu=$(DEVICE) -std=c99<br>
+                            ---<br>
+                        </span>
+                        <span class="right">
+                            &gt; CFLAGS += -Os -ffunction-sections -DAVR -I /opt/nibobeelib/src -mmcu=$(DEVICE) -std=c99<br>
+                        </span>
+                        37c34<br>
+                        <span class="left">
+                            &lt; LIBS = -lnibobee_base -lnibobee_utils<br>
+                            ---<br>
+                        </span>
+                        <span class="right">
+                            &gt; LIBS = /opt/nibobeelib/lib/libnibobee_base.a /opt/nibobeelib/lib/libnibobee_utils.a<br>
+                        </span>
+                            108c105<br>
+                        <span class="left">
+                            &lt;   rm -f *.d *.o *~ *.elf $(TARGET).hex $(TARGET).lss $(NIBO_OBJS)<br>
+                            ---<br>
+                        </span>
+                        <span class="right">
+                            &gt;   rm -f *.d *.o *~ *.elf $(TARGET).hex $(TARGET).lss $(TARGET).xhex $(NIBO_OBJS)
+                        </span>
+                    </code>
+                </div>
+                <p>
+                    I changed the relative paths so that they point to our /opt/nibobeelib/ directory.<br>
+                    Why? This way we can compile the C source code from any folder location without problems.<br>
+                    Furthermore, I modified the "clean" function to also delete .xhex files, as the default Makefile doesn't do that.<br>
+                    By now, you should have replaced the original Makefile with the modified version.
+                </p>    
+                <p>
+                    Alright, before we compile the program1.c program, we have to first transfer a .hex file which calibrates the odometry sensors of the robot.<br>
+                    First make a new project directory called "calibration":
+                </p>
+                <div class="codeblock">
+                    <code>
+                        mkdir ~/Desktop/nibobee-projects/calibration/
+                    </code>
+                </div>
+                <p>
+                    Copy the hex file from the NIBObee library like so:
+                </p>
+                <div class="codeblock">
+                    <code>
+                        cp /opt/nibobeelib/hex/calibration.hex ../calibration
+                    </code>
+                </div>
+                <p>
+                    Now, download the script <a href="https://gist.github.com/christianheinrichs/ab750c916ef11d42d5de/download">here</a> and put it into the "calibration" folder or copy and paste the following code into a file called calibrate.sh,<br>
+                    which should be saved in the just recently mentioned folder "calibration":
+                </p>
+                <div class="codeblock">
+                    <code>
+                        #!/bin/bash<br><br>
+
+                        HFUSE=0xd1<br>
+                        LFUSE=0xef<br>
+                        PROGRAMMER=usbasp<br>
+                        TARGET=calibration<br><br>
+
+                        printf '\E[31m'"\033[1mFlashing calibration program in 3 seconds\n\033[0m"<br>
+                        sleep 3<br><br>
+
+                        sudo avrdude -c $PROGRAMMER -p m16 -B 10 -U lfuse:w:$LFUSE:m -U hfuse:w:$HFUSE:m<br>
+                        sudo avrdude -c $PROGRAMMER -p m16 -B 2 -U flash:w:$TARGET.hex
+                    </code>
+                </div>
+                <p>
+                    For this script, I just took the values and commands of the default Makefile and adapted them to a .hex file, because nothing has to be compiled.<br>
+                    Okay, flip on the power switch of your NIBObee and connect it via USB to your computer or laptop,<br>
+                    then go into the "calibration" directory and transfer the calibration file to the robot with the following 3 commands:
+                </p>
+                <div class="codeblock">
+                    <code>
+                        cd ~/Desktop/nibobee-projects/calibration<br>
+                        chmod +x calibrate.sh<br>
+                        ./calibrate.sh
+                    </code>
+                </div>
+                <p>
+                    You will see the green programming LED (LED4) flashing once and a bunch of messages in your console.<br>
+                    The script is flashing the fuses HFUSE AND LFUSE and, last but not least, the FLASH memory.
+                </p>
+                <p>
+                    If everything went fine, the NIBObee is now in calibration mode and you have to calibrate it.<br>
+                    Find a white surface and a black surface, ideally a piece of white paper and a piece of black paper.<br>
+                    Now place the robot on a white surface and push back the left feeler.<br>
+                    You will see the the yellow LEDs blink 5 times.<br>
+                    Place the robot on a black surface now and push back the right feeler.<br>
+                    You will see the red LEDs blink 5 times.
+                </p>     
+                <p>
+                    To save the calibrated values, push both feelers forward simultaneously and all 4 LEDs blink 5 times.
+                    The NIBObee should now have saved the calibration values into its EEPROM memory.
+                </p>
+                <p>
+                    You almost completed this tutorial. We are now going to compile the first program.
+                    Go into the program1 folder like this:
+                </p>
+                <div class="codeblock">
+                    <code>
+                        cd ~/Desktop/nibobee-projects/program1/
+                    </code>
+                </div>
+                <p>
+                    Then type <code class="command">make</code> to compile the code and transfer the .hex file with:
+                </p>
+                <div class="codeblock">
+                    <code>
+                        sudo make avrdude
+                    </code>
+                </div>
+                <p>
+                    When it's finished you should see the red LED1 blinking constantly in the same pattern.<br>
+                    Congratulations, you successfully installed the NIBObee library on Linux, learned a little bit about Makefile debugging, calibrated your NIBObee robot, compiled and transferred your first program to the robot!
+                <p>
+                    Thanks to nicai-systems for creating the NIBObee robot and writing such good tutorials!
+                </p>
+                <p>
+                    Written by Christian Heinrichs - Last update: 08/29/2014
+                </p>
+                <a href="#top">Go to beginning of this page</a>
+        </div>
+        <div id="footer">
+            <h1>Hosted by <a href="https://pages.github.com/">GitHub pages</a></h1>
+        </div>
+    </body>
+</html>

@@ -38,9 +38,9 @@
                 Getting the NIBObee library to work on Linux
             </h1>
             <p>
-                I simply wrote this tutorial, because I didn't find any NIBObee library installation tutorial for Linux.<br>
-                The system I am using here is Ubuntu 14.04 LTS Trusty Tahr. If you use Debian, you should get along well with this tutorial.<br>
-                If you have bought a NIBObee robot, you most likely got it with a CD.<br>
+                I simply wrote this tutorial, because I didn't find any NIBObee library installation tutorial for Linux.
+                The system I am using here is Ubuntu 14.04 LTS Trusty Tahr. If you use Debian, you should get along well with this tutorial.
+                If you have bought a NIBObee robot, you most likely got it with a CD.
                 The only relevant folder you will need for this is "linux".
             </p>
             <p>
@@ -88,9 +88,9 @@
                     </code>
                 </div>
                 <p>
-                    We are also stuck at another problem without even realizing it.<br>
-                    The makers of the CD packaged the include directory for Linux differently as they did for Windows.<br>
-                    The include directory is in fact there! But it is located in the src folder and called nibobee instead of include.<br>
+                    We are also stuck at another problem without even realizing it.
+                    The makers of the CD packaged the include directory for Linux differently as they did for Windows.
+                    The include directory is in fact there! But it is located in the src folder and called nibobee instead of include.
                     But don't worry, this problem will get solved in a few moments.
                 </p>
                 <p>
@@ -146,8 +146,8 @@
                     </code>
                 </div>
                 <p>
-                    Don't worry. This is completely normal and I will now explain what just happened.<br>
-                    The Makefile in this folder uses relative paths instead of absolute paths.<br>
+                    This is completely normal and I will now explain what just happened.
+                    The Makefile in this folder uses relative paths instead of absolute paths.
                     As you can see, the problem occurs with the relative paths, seen here as dots: <span>../../</span><br>
                     Thus, I have modified the Makefile to take care of that problem: Download it <a href="https://gist.github.com/christianheinrichs/a8cbbeb299c7f3a79b6a/download">here</a> and replace the default Makefile.<br>
                 </p>
@@ -219,9 +219,9 @@
                     </code>
                 </div>
                 <p>
-                    I changed the relative paths so that they point to our /opt/nibobeelib/ directory.<br>
-                    Why? This way we can compile the C source code from any folder location without problems.<br>
-                    Furthermore, I modified the "clean" function to also delete .xhex files, as the default Makefile doesn't do that.<br>
+                    I changed the relative paths so that they point to our /opt/nibobeelib/ directory.
+                    Why? This way we can compile the C source code from any folder location without problems.
+                    Furthermore, I modified the "clean" function to also delete .xhex files, as the default Makefile doesn't do that.
                     By now, you should have replaced the original Makefile with the modified version.
                 </p>    
                 <p>
@@ -262,7 +262,7 @@
                     </code>
                 </div>
                 <p>
-                    For this script, I just took the values and commands of the default Makefile and adapted them to a .hex file, because nothing has to be compiled.<br>
+                    For this script, I just took the values and commands of the default Makefile and adapted them to a .hex file, because nothing has to be compiled.
                     Okay, flip on the power switch of your NIBObee and connect it via USB to your computer or laptop,<br>
                     then go into the "calibration" directory and transfer the calibration file to the robot with the following 3 commands:
                 </p>
@@ -274,15 +274,15 @@
                     </code>
                 </div>
                 <p>
-                    You will see the green programming LED (LED4) flashing once and a bunch of messages in your console.<br>
+                    You will see the green programming LED (LED4) flashing once and a bunch of messages in your console.
                     The script is flashing the fuses HFUSE AND LFUSE and, last but not least, the FLASH memory.
                 </p>
                 <p>
-                    If everything went fine, the NIBObee is now in calibration mode and you have to calibrate it.<br>
-                    Find a white surface and a black surface, ideally a piece of white paper and a piece of black paper.<br>
-                    Now place the robot on a white surface and push back the left feeler.<br>
-                    You will see the the yellow LEDs blink 5 times.<br>
-                    Place the robot on a black surface now and push back the right feeler.<br>
+                    If everything went fine, the NIBObee is now in calibration mode and you have to calibrate it.
+                    Find a white surface and a black surface, ideally a piece of white paper and a piece of black paper.
+                    Now place the robot on a white surface and push back the left feeler.
+                    You will see the the yellow LEDs blink 5 times.
+                    Place the robot on a black surface now and push back the right feeler.
                     You will see the red LEDs blink 5 times.
                 </p>     
                 <p>
@@ -307,13 +307,13 @@
                     </code>
                 </div>
                 <p>
-                    When it's finished you should see the red LED1 blinking constantly in the same pattern.<br>
+                    When it's finished you should see the red LED1 blinking constantly in the same pattern.
                     Congratulations, you successfully installed the NIBObee library on Linux, learned a little bit about Makefile debugging, calibrated your NIBObee robot, compiled and transferred your first program to the robot!
                 <p>
                     Thanks to nicai-systems for creating the NIBObee robot and writing such good tutorials!
                 </p>
                 <p>
-                    Written by Christian Heinrichs - Last update: 08/29/2014
+                    Written by Christian Heinrichs - Last update: 09/07/2014
                 </p>
                 <a href="#top">Go to beginning of this page</a>
         </div>

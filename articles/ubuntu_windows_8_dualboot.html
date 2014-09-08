@@ -46,16 +46,16 @@
                     Last year and until recently, I had many problems with getting a working dual boot configuration on this laptop and thus I have written this tutorial.
                 </p>
                 <p>
-                    First download the ISO image over at <a href="http://www.ubuntu.com/download/desktop">Ubuntu.com</a>. Burn it to a DVD and make a backup of all your important files.<br>
-                    Remove all thumb drives or you may lose data in the process.<br>
+                    First download the ISO image over at <a href="http://www.ubuntu.com/download/desktop">Ubuntu.com</a>. Burn it to a DVD and make a backup of all your important files.
+                    Remove all thumb drives or you may lose data in the process.
                     Insert the DVD, remove the ethernet cable from your laptop and turn off all your laptop's internet connections.
                 </p>
                 <p>
-                    When you see the Toshiba logo, press F12 repeatedly until the boot menu appears.<br>
-                    Choose to boot from your DVD drive. The system will then boot the DVD and you have to choose "Try Ubuntu without installing it first".<br>
-                    This is the Live CD mode, from where you are now going to format your hard drive.<br>
-                    Click on the dash logo in the top left, enter "terminal" and press ENTER.<br>
-                    To see more, I would advice you to maximize the terminal, so do that please.<br>
+                    When you see the Toshiba logo, press F12 repeatedly until the boot menu appears.
+                    Choose to boot from your DVD drive. The system will then boot the DVD and you have to choose "Try Ubuntu without installing it first".
+                    This is the Live CD mode, from where you are now going to format your hard drive.
+                    Click on the dash logo in the top left, enter "terminal" and press ENTER.
+                    To see more, I would advice you to maximize the terminal, so do that please.
                     Now press CTRL+T and you get 2 tabs in your terminal. Click on the first tab and type:
                 </p>
                 <div class="codeblock">
@@ -68,7 +68,7 @@
                     AS ALREADY MENTIONED, BACKUP YOUR DATA BEFORE DOING THIS!
                 </div>
                 <p>
-                    This might take a while and I assume that you have 750 GB on your Toshiba hard disk. It takes a bit over 2 hours.<br>
+                    This might take a while and I assume that you have 750 GB on your Toshiba hard disk. It takes a bit over 2 hours.
                     If you want to check the progress of dd, this is where the second terminal tab comes in handy. Click on it and type:
                 </p>
                 <div class="codeblock">
@@ -88,67 +88,67 @@
                     This sends an interrupting USR1 signal to the dd program which then dumps its current progress, so switch over to the first tab and you will see how many Gigabytes have been overwritten in the elapsed time.
                 </p>
                 <p>
-                    When the process is done, you will get a message from dd that no space is left on device and 750 GB have been written.<br>
-                    Get your Windows 8/8.1 DVD or a similar installation medium and click on the button at the top right and go to Shut Down... - Reboot.<br>
-                    You will see the message "Please remove installation media and close tray (if any) then press ENTER".<br>
-                    The DVD gets ejected automatically, so put your Ubuntu DVD back into the case and insert the Windows DVD.<br>
+                    When the process is done, you will get a message from dd that no space is left on device and 750 GB have been written.
+                    Get your Windows 8/8.1 DVD or a similar installation medium and click on the button at the top right and go to Shut Down... - Reboot.
+                    You will see the message "Please remove installation media and close tray (if any) then press ENTER".
+                    The DVD gets ejected automatically, so put your Ubuntu DVD back into the case and insert the Windows DVD.
                     Close the tray, press ENTER and then F12 repeatedly again.
                 </p>
                 <p>
-                    This time however, don't boot from anywhere, but choose the last option "Enter setup".<br>
-                    Go to the tab "Security", change SecureBoot to "Enabled" and save with F10.<br>
+                    This time however, don't boot from anywhere, but choose the last option "Enter setup".
+                    Go to the tab "Security", change SecureBoot to "Enabled" and save with F10.
                     Now the system reboots and starts the Windows DVD.
                 </p>
                 <p>
-                    At the first screen, just click on "Next" and in the second screen click on "Install Now".<br>
-                    You will probably need to enter your Windows product key now.<br>
-                    Choose the option "Custom: Install Windows only (advanced)".<br>
-                    Now you will see the whole hard drive which should have a NTFS size of 698GB.<br>
-                    That's obviously your hard drive, so just click "Next". No other steps are needed at this point.<br>
+                    At the first screen, just click on "Next" and in the second screen click on "Install Now".
+                    You will probably need to enter your Windows product key now.
+                    Choose the option "Custom: Install Windows only (advanced)".
+                    Now you will see the whole hard drive which should have a NTFS size of 698GB.
+                    That's obviously your hard drive, so just click "Next". No other steps are needed at this point.
                     When the installation of Windows is done and everything was configured properly, the laptop should restart after 10 seconds.
                 </p>
                 <p>
                     Now Windows should have started. Eject the Windows DVD and insert the Ubuntu DVD again.
                 </p>
                 <p>
-                    Open the control panel, click on "System", click on "Administrative Tools" and start Disk Cleanup.<br>
-                    After it's done, start the "Optimize Drives" program.<br>
-                    Go to the "Disk Manager" of Windows and you will see a partition labeled C:<br>
-                    Right-click it and choose "Shrink Volume" and enter the amount you want for your Linux installation.<br>
-                    I chose 100 GB, so that would be 102400 MB. Now repeat the disk cleanup and defragmentation procedure.<br>
+                    Open the control panel, click on "System", click on "Administrative Tools" and start Disk Cleanup.
+                    After it's done, start the "Optimize Drives" program.
+                    Go to the "Disk Manager" of Windows and you will see a partition labeled C:
+                    Right-click it and choose "Shrink Volume" and enter the amount you want for your Linux installation.
+                    I chose 100 GB, so that would be 102400 MB. Now repeat the disk cleanup and defragmentation procedure.
                     This should just take a minute as the system is clean. When you are ready, reboot with the Ubuntu DVD inside the tray and start the menu with F12.
                 </p>
                 <p>
-                    Go into "System Setup" again, then navigate to the "Security" tab and switch Secureboot to Disabled.<br>
-                    This step is very important, but explained later, so press F10 and save. Hit the F12 button repeatedly again and boot from DVD.<br>
+                    Go into "System Setup" again, then navigate to the "Security" tab and switch Secureboot to Disabled.
+                    This step is very important, but explained later, so press F10 and save. Hit the F12 button repeatedly again and boot from DVD.
                     Now the Linux menu comes up. This time of course, choose "Install Ubuntu".
                 </p>
                 <p>
-                    At the welcome screen just click "Continue" after selecting your language.<br>
-                    On the next screen click "Continue" again. Now you should see the "Installation Type" dialog, so choose "Do something else".<br>
-                    You will see a list of all the partitions on your current system.<br>
-                    On this system there were 2 NTFS partitions, one EFI partition and a free space of 102400 MB listed.<br>
-                    Rightclick the free space which you prepared in Windows before and enter the number of Megabytes your RAM has.<br>
-                    It most likely will be 8GB, so enter 8192 MB. Change the partition type to swap and click OK.<br>
-                    A swap partition has just been created. Rightclick the rest of this free space and choose ext4 filesystem.<br>
-                    Click on mount point and choose / . When you are sure that you assigned those two partitions correctly, click next to install Ubuntu.<br>
+                    At the welcome screen just click "Continue" after selecting your language.
+                    On the next screen click "Continue" again. Now you should see the "Installation Type" dialog, so choose "Do something else".
+                    You will see a list of all the partitions on your current system.
+                    On this system there were 2 NTFS partitions, one EFI partition and a free space of 102400 MB listed.
+                    Rightclick the free space which you prepared in Windows before and enter the number of Megabytes your RAM has.
+                    It most likely will be 8GB, so enter 8192 MB. Change the partition type to swap and click OK.
+                    A swap partition has just been created. Rightclick the rest of this free space and choose ext4 filesystem.
+                    Click on mount point and choose / . When you are sure that you assigned those two partitions correctly, click next to install Ubuntu.
                     Go through all the dialogs, enter your hostname, username, time settings etc. and in about 15 minutes the installation is done.
                 </p>
                 <p>
-                    If everything went fine, your system should reboot and the GRUB menu appears.<br>
-                    You now have a fully working dual boot system and can plug in the ethernet cable again.<br>
+                    If everything went fine, your system should reboot and the GRUB menu appears.
+                    You now have a fully working dual boot system and can plug in the ethernet cable again.
                     Of course, update Linux as well as Windows first, before surfing the web.
                 </p>
                 <p>
                     Now a last word concerning the Secureboot issue.
                 </p>
                 <p>
-                    Never re-enable it again or Windows will break the bootloader of Ubuntu (<a href="https://www.gnu.org/software/grub/">GRUB</a>) and you will only be able to boot into Windows.<br>
-                    I am not sure why it happens on this laptop and I have tried several solutions to install Ubuntu with Secureboot enabled, but to no avail.<br>
-                    There have been several reports of people having problems with Linux/Windows 8 dual boot installations,<br>
+                    Never re-enable it again or Windows will break the bootloader of Ubuntu (<a href="https://www.gnu.org/software/grub/">GRUB</a>) and you will only be able to boot into Windows.
+                    I am not sure why it happens on this laptop and I have tried several solutions to install Ubuntu with Secureboot enabled, but to no avail.
+                    There have been several reports of people having problems with Linux/Windows 8 dual boot installations,
                     which most likely has something to do with UEFI and the Secureboot feature.
                 <p>
-                    Written by Christian Heinrichs - Last update: 08/29/2014
+                    Written by Christian Heinrichs - Last update: 09/07/2014
                 </p>
                 <a href="#top">Go to beginning of this page</a>
         </div>

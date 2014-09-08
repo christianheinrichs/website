@@ -29,7 +29,7 @@
                     <a href="http://christianheinrichs.github.io/de/kontakt.html">Kontakt</a>
                 </li>
                 <li>
-                    <a href="http://christianheinrichs.github.io/de/about.html">Über diese Website</a>
+                    <a href="http://christianheinrichs.github.io/de/ueber.html">Über diese Website</a>
                 </li>
             </ul>
         </div>
@@ -38,13 +38,13 @@
                 Installieren der NIBObee Bibliothek auf Linux
             </h1>
             <p>   
-                Da ich im Internet keine NIBObee-Bibliothek Installationstutorials für Linux finden konnte, habe ich dieses Dokument verfasst.<br>
-                Das Betriebssystem welches ich hierfür nutze ist Ubuntu 14.04 LTS Trusty Tahr. Falls Du Debian nutzt, solltest Du mit diesem Tutorial gut zu Recht kommen.<br>
-                Falls Du einen NIBObee-Roboter gekauft hast, wurde diesem höchstwahrscheinlich eine CD beigelegt.<br>
+                Da ich im Internet keine NIBObee-Bibliothek Installationstutorials für Linux finden konnte, habe ich dieses Dokument verfasst.
+                Das Betriebssystem welches ich hierfür nutze ist Ubuntu 14.04 LTS Trusty Tahr. Falls Du Debian nutzt, solltest Du mit diesem Tutorial gut zu Recht kommen.
+                Falls Du einen NIBObee-Roboter gekauft hast, wurde diesem höchstwahrscheinlich eine CD beigelegt.
                 Der einzig relevante Ordner, den Du hierfür brauchst ist „linux“.
             </p>
             <p>
-                Öffne das Stammverzeichnis der CD-ROM und sieh dir den Inhalt an.<br>
+                Öffne das Stammverzeichnis der CD-ROM und sieh dir den Inhalt an.
                 Hier sind 5 tar-Archive, 4 Programme, sowie die NIBObee-Bibliothek enthalten.
             </p>
             <p>
@@ -88,9 +88,9 @@
                     </code>
                 </div>
                 <p>
-                    Jetzt hängen wir an einem neuen Problem fest ohne es zu realisieren.<br>
-                    Die Macher der CD haben das include-Verzeichnis für Linux anders gebündelt als für Windows.<br>
-                    Das include-Verzeichnis ist tatsächlich existent! Jedoch ist es im src-Ordner vorhanden und heisst nibobee anstatt include.<br>
+                    Jetzt hängen wir an einem neuen Problem fest ohne es zu realisieren.
+                    Die Macher der CD haben das include-Verzeichnis für Linux anders gebündelt als für Windows.
+                    Das include-Verzeichnis ist tatsächlich existent! Jedoch ist es im src-Ordner vorhanden und heisst nibobee anstatt include.
                     Keine Sorge, dieses Problem wird in ein paar Momenten gelöst.
                 </p>
                 <p>
@@ -146,10 +146,10 @@
                     </code>
                 </div>
                 <p>
-                    Keine Sorge. Das ist völlig normal und ich werde jetzt erklären was soeben geschehen ist.<br>
-                    Der Makefile in diesem Verzeichnis benutzt relative Pfade anstelle von absoluten Pfaden.<br>
+                    Das ist völlig normal und ich werde jetzt erklären was soeben geschehen ist.
+                    Der Makefile in diesem Verzeichnis benutzt relative Pfade anstelle von absoluten Pfaden.
                     Wie Du sehen kannst, tritt das Problem wegen der relativen Pfade auf. Hier gekennzeichnet als Punkte: <span>../../</span><br>
-                    Also habe ich den Makefile modifiziert, um dieses Problem zu beheben: Downloade die Datei <a href="https://gist.github.com/christianheinrichs/a8cbbeb299c7f3a79b6a/download">hier</a> und ersetze den Standard-Makefile.
+                    Also habe ich den Makefile modifiziert, um dieses Problem zu beheben. Downloade die Datei <a href="https://gist.github.com/christianheinrichs/a8cbbeb299c7f3a79b6a/download">hier</a> und ersetze den Standard-Makefile.
                 </p>
                 <p>
                     Schaut man auf die diff-Datei, sieht man die Änderungen:
@@ -219,9 +219,9 @@
                     </code>
                 </div>
                 <p>
-                    Ich habe die relativen Pfade so geändert, dass sie auf unser /opt/nibobeelib/ Verzeichnis verweisen.<br>
-                    Warum? Auf diesem Weg können wir den C-Quelltext von überall aus ohne Probleme kompilieren.<br>
-                    Ausserdem habe ich den „clean“-Befehl so geändert, dass er ebenfalls .xhex Dateien löscht, da der Standard-Makefile das nicht macht.<br>
+                    Ich habe die relativen Pfade so geändert, dass sie auf unser /opt/nibobeelib/ Verzeichnis verweisen.
+                    Warum? Auf diesem Weg können wir den C-Quelltext von überall aus ohne Probleme kompilieren.
+                    Ausserdem habe ich den „clean“-Befehl so geändert, dass er ebenfalls .xhex Dateien löscht, da der Standard-Makefile das nicht macht.
                     Ab diesem Zeitpunkt solltest Du schon den originalen Makefile mit der modifizierten Version ersetzt haben.
                 </p>    
                 <p>
@@ -262,7 +262,7 @@
                     </code>
                 </div>
                 <p>
-                    Für diesen Script habe ich die Werte und Befehle aus dem Standard-Makefile entnommen und an eine .hex-Datei angepasst, weil nichts kompiliert werden muss.<br>
+                    Für diesen Script habe ich die Werte und Befehle aus dem Standard-Makefile entnommen und an eine .hex-Datei angepasst, weil nichts kompiliert werden muss.
                     Okay, schalte den POWER-Schalter deines NIBObees ein und verbinde den Roboter via USB mit deinem Computer oder Laptop,<br>
                     dann gehst du in das „calibration“-Verzeichnis und überträgst die Kalibrationsdatei mit folgenden 3 Befehlen auf den Roboter:
                 </p>
@@ -274,23 +274,23 @@
                     </code>
                 </div>
                 <p>
-                    Du wirst die grüne Programmierungs-LED (LED4) einmal blinken sehen und eine Reihe von Meldungen in der Konsole.<br>
+                    Du wirst die grüne Programmierungs-LED (LED4) einmal blinken sehen und eine Reihe von Meldungen in der Konsole.
                     Der Script flasht die Sicherungen HFUSE, LFUSE und zu guter Letzt, den FLASH-Speicher.
                 </p>
                 <p>
-                    Falls alles gut gelaufen ist, befindet sich der NIBObee nun im Kalibrierungsmodus und Du musst ihn kalibrieren.<br>
-                    Finde eine weisse oder schwarze Oberfläche, idealerweise ein Stück weisses Papier und ein Stück schwarzes Papier.<br>
-                    Platziere den Roboter auf eine weisse Oberfläche und drücke den linken Fühler nach hinten.<br>
-                    Die gelben LEDs blinken 5 mal.<br>
-                    Platziere den Roboter auf eine schwarze Oberfläche und drücke den rechten Fühler nach hinten.<br>
-                    Die roten LEDS 5 blinken 5 mal.<br>
+                    Falls alles gut gelaufen ist, befindet sich der NIBObee nun im Kalibrierungsmodus und Du musst ihn kalibrieren.
+                    Finde eine weisse oder schwarze Oberfläche, idealerweise ein Stück weisses Papier und ein Stück schwarzes Papier.
+                    Platziere den Roboter auf eine weisse Oberfläche und drücke den linken Fühler nach hinten.
+                    Die gelben LEDs blinken 5 mal.
+                    Platziere den Roboter auf eine schwarze Oberfläche und drücke den rechten Fühler nach hinten.
+                    Die roten LEDS 5 blinken 5 mal.
                 </p>     
                 <p>
                     Um die Kalibrierungswerte zu speichern, drücke beide Fühler gleichzeitig vorwärts und alle 4 LEDs blinken 5 mal.
                     Der NIBObee sollte nun die Kalibrierungswerte in seinem EEPROM-Speicher abgespeichert haben.
                 </p>
                 <p>
-                    Du hast dieses Tutorial fast abgeschlossen. Wir werden jetzt das erste Programm kompilieren.
+                    Du hast dieses Tutorial fast abgeschlossen. Wir werden jetzt das erste Programm kompilieren.<br>
                     Gehe wie folgt ins „program1“-Verzeichnis:
                 </p>
                 <div class="codeblock">
@@ -299,7 +299,8 @@
                     </code>
                 </div>
                 <p>
-                    Tippe dann <code class="command">make</code> ein, um den Code zu kompilieren. Gib folgendes ein um die .hex-Datei zu übertragen:
+                    Tippe dann <code class="command">make</code> ein, um den Code zu kompilieren.<br>
+                    Gib folgendes ein um die .hex-Datei zu übertragen:
                 </p>
                 <div class="codeblock">
                     <code>
@@ -307,13 +308,13 @@
                     </code>
                 </div>
                 <p>
-                    Wenn der Vorgang beendet ist, solltest Du die rote LED1 konstant im selben Muster blinken sehen.<br>
+                    Wenn der Vorgang beendet ist, solltest Du die rote LED1 konstant im selben Muster blinken sehen.
                     Gratulation! Du hast erfolgreich die NIBObee-Bibliothek auf Linux installiert, ein bisschen etwas über Makefile-Debugging gelernt, deinen NIBObee-Roboter kalibriert und dein erstes Programm kompiliert, als auch auf den Roboter übertragen!
                 <p>
                     Einen Dank an nicai-systems für die Entwicklung des NIBObee-Roboters und für das Verfassen von solch guten Tutorials!
                 </p>
                 <p>
-                    Verfasst von Christian Heinrichs - Letzte Aktualisierung: 26.08.2014
+                    Verfasst von Christian Heinrichs - Letzte Aktualisierung: 08.09.2014
                 </p>
                 <a href="#top">An den Anfang dieser Seite zurückkehren</a>
         </div>

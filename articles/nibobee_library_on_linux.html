@@ -9,7 +9,7 @@
     <body>
         <div id="header">
             <h1>~christianheinrichs.github.io</h1>
-            <a href="http://christianheinrichs.github.io/de/index.html">de</a> / <a href="http://christianheinrichs.github.io/index.html">en</a>
+            Language: <a href="http://christianheinrichs.github.io/de/index.html">de</a> / <a href="http://christianheinrichs.github.io/index.html">en</a>
         </div>
         <div id="navigation">
             <ul>
@@ -34,9 +34,9 @@
             </ul>
         </div>
         <div id="content">
-            <h1>
+            <h2>
                 Getting the NIBObee library to work on Linux
-            </h1>
+            </h2>
             <p>
                 I simply wrote this tutorial, because I didn't find any NIBObee library installation tutorial for Linux.
                 The system I am using here is Ubuntu 14.04 LTS Trusty Tahr. If you use Debian, you should get along well with this tutorial.
@@ -52,7 +52,7 @@
                 - Install the 4 programs <a href="http://www.nongnu.org/avrdude/">avrdude</a>, <a href="http://www.nongnu.org/avr-libc/">avr-libc</a>, <a href="https://www.gnu.org/software/binutils/">binutils</a> and <a href="https://www.gnu.org/software/gcc/">gcc</a> from the tar archives by unpacking and compiling them<br>
                 - Download and installation of the programs with package management software like <a href="https://wiki.debian.org/apt-get">apt-get</a>, <a href="https://www.archlinux.org/pacman/">pacman</a> or <a href="http://yum.baseurl.org/">yum</a><br><br>
                 
-                Out of comfortability I recommend using the second option. So type:<br>
+                Out of comfortability I recommend using the second option. So type:
             </p>
                 <div class="codeblock">
                     <code>
@@ -62,7 +62,7 @@
                 <p>
                     After you have done that, you have still some work to do.
                     First, we need to make a project directory for our NIBObee projects.<br>
-                    Here we will create this folder on the desktop with:<br>
+                    Here we will create this folder on the desktop with:
                 </p>
                 <div class="codeblock">
                     <code>
@@ -70,7 +70,7 @@
                     </code>
                 </div>
                 <p>
-                    Assuming you are using the CD, type the following commands to change into the CD-ROM directory and then copy the "nibobeelib" tar file to your newly created directory:<br>
+                    Assuming you are using the CD, type the following commands to change into the CD-ROM directory and then copy the "nibobeelib" tar file to your newly created directory:
                 </p>
                 <div class="codeblock">
                     <code>
@@ -149,7 +149,7 @@
                     This is completely normal and I will now explain what just happened.
                     The Makefile in this folder uses relative paths instead of absolute paths.
                     As you can see, the problem occurs with the relative paths, seen here as dots: <span>../../</span><br>
-                    Thus, I have modified the Makefile to take care of that problem: Download it <a href="https://gist.github.com/christianheinrichs/a8cbbeb299c7f3a79b6a/download">here</a> and replace the default Makefile.<br>
+                    Thus, I have modified the Makefile to take care of that problem. Download it <a href="https://gist.github.com/christianheinrichs/a8cbbeb299c7f3a79b6a/download">here</a> and replace the default Makefile.
                 </p>
                 <p>
                     Looking at the diff file, you can see the changes:
@@ -263,7 +263,7 @@
                 </div>
                 <p>
                     For this script, I just took the values and commands of the default Makefile and adapted them to a .hex file, because nothing has to be compiled.
-                    Okay, flip on the power switch of your NIBObee and connect it via USB to your computer or laptop,<br>
+                    Okay, flip on the power switch of your NIBObee and connect it via USB to your computer or laptop,
                     then go into the "calibration" directory and transfer the calibration file to the robot with the following 3 commands:
                 </p>
                 <div class="codeblock">
@@ -290,7 +290,7 @@
                     The NIBObee should now have saved the calibration values into its EEPROM memory.
                 </p>
                 <p>
-                    You almost completed this tutorial. We are now going to compile the first program.
+                    You almost completed this tutorial. We are now going to compile the first program.<br>
                     Go into the program1 folder like this:
                 </p>
                 <div class="codeblock">
@@ -313,7 +313,7 @@
                     Thanks to nicai-systems for creating the NIBObee robot and writing such good tutorials!
                 </p>
                 <p>
-                    Written by Christian Heinrichs - Last update: 09/07/2014
+                    Written by Christian Heinrichs - Last update: 09/20/2014
                 </p>
                 <a href="#top">Go to beginning of this page</a>
         </div>

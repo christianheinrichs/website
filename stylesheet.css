@@ -1,22 +1,18 @@
-/* 
-    This CSS file and the website itself are in an experimental stage.   
-    Nonetheless, this website will be constantly improved and maintained
-    and will hopefully be somewhat stable in the next weeks.
-*/
+/* This is the CSS for my website */
 
 body {
-    background-color: beige;
-    color: green;
+    background-color: #f5f5dc;
+    color: #008000;
 }
 
 a {
-    color: teal;
+    color: #008080;
     font-family: Arial;
     text-decoration: none;
 }
 
 a:hover {
-    color: limegreen;
+    color: #32cd32;
 }
 
 h1, h2 {
@@ -36,17 +32,17 @@ img {
 }
 
 li {
-    color: steelblue;
+    color: #4682b4;
     list-style: none;
     margin-left: 4px;
 }
 
 p {
-    color: steelblue;
+    color: #4682b4;
 }
 
 span {
-    color: red;
+    color: #ff0000;
 }
 
 ul {
@@ -55,8 +51,8 @@ ul {
 }
 
 .codeblock {
-    background-color: lavender;
-    color: darkblue;
+    background-color: #e6e6fa;
+    color: #00008b;
     width: 564px;
     padding-left: 5px;
     padding-bottom: 2px;
@@ -65,8 +61,8 @@ ul {
 }
 
 .diffblock {
-    background-color: lavender;
-    color: darkblue;
+    background-color: #e6e6fa;
+    color: #00008b;
     width: 640px;
     padding-left: 5px;
     padding-bottom: 2px;
@@ -75,16 +71,16 @@ ul {
 }
 
 .left{
-    color: red;
+    color: #ff0000;
 }
 
 .right{
-    color: limegreen;
+    color: #32cd32;
 }
 
 .command {
-    background-color: lavender;
-    color: darkblue;
+    background-color: #e6e6fa;
+    color: #00008b;
     margin-left: 2px;
     padding: 2px;
     border-radius: 4px;
@@ -92,8 +88,8 @@ ul {
 }
 
 #header {
-    background-color: beige;
-    border-bottom: 2px solid darkseagreen;
+    background-color: #f5f5dc;
+    border-bottom: 2px solid #8fbc8f;
     padding-bottom: 4px;
 }
 
@@ -111,7 +107,7 @@ ul {
 }
 
 #content {
-    background-color: beige;
+    background-color: #f5f5dc;
     height: auto;
     margin-left: 20px;
     width: 86%;
@@ -119,7 +115,7 @@ ul {
 }
 
 #content p {
-    color: darkolivegreen;
+    color: #556b2f;
 }
 
 #content ul li {
@@ -128,17 +124,17 @@ ul {
 }
 
 #footer{
-    background-color: beige;
+    background-color: #f5f5dc;
     clear: both;
     font-size: 12px;
     text-align: center;
 }
 
 #warning {
-    background-color: black;
-    color: yellow;
+    background-color: #000000;
+    color: #ffff00;
     font-family: Arial;
     padding-left: 4px;
     width: 822px;
-    border: 2px dotted yellow;
+    border: 2px dotted #ffff00;
 }

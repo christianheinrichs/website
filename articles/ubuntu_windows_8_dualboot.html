@@ -51,12 +51,12 @@
                 </p>
                 <p>
                     First download the ISO image over at
-                    <a href="http://www.ubuntu.com/download/desktop">Ubuntu.com</a>.
-                    Burn it to a DVD and make a backup of all your important
-                    files. Remove all thumb drives or you may lose data in the
-                    process. Insert the DVD, remove the ethernet cable from
-                    your laptop and turn off all your laptop's internet
-                    connections.
+                    <a href="http://www.ubuntu.com/download/desktop">
+                        Ubuntu.com</a>. Burn it to a DVD and make a backup of
+                    all your important files. Remove all thumb drives or you may
+                    lose data in the process. Insert the DVD, remove the
+                    ethernet cable from your laptop and turn off all your
+                    laptop's internet connections.
                 </p>
                 <p>
                     When you see the Toshiba logo, press F12 repeatedly until
@@ -76,7 +76,8 @@
                     </code>
                 </div><br>
                 <div id="warning">
-                    WARNING: THIS WILL COMPLETELY OVERWRITE ALL THE DATA ON YOUR HARD DISK WITH ZEROES.<br>
+                    WARNING: THIS WILL COMPLETELY OVERWRITE ALL THE DATA ON YOUR
+                    HARD DISK WITH ZEROES.<br>
                     AS ALREADY MENTIONED, BACKUP YOUR DATA BEFORE DOING THIS!
                 </div>
                 <p>
@@ -91,8 +92,8 @@
                     </code>
                 </div>
                 <p>
-                    Determine the sudo dd process PID (in the second column)
-                    and type:
+                    Determine the sudo dd process PID (in the second column) and
+                    type:
                 </p>
                 <div class="codeblock">
                     <code>
@@ -101,21 +102,21 @@
                 </div>
                 <p>
                     This sends an interrupting USR1 signal to the dd program
-                    which then dumps its current progress, so switch over to
-                    the first tab and you will see how many Gigabytes have been
+                    which then dumps its current progress, so switch over to the
+                    first tab and you will see how many Gigabytes have been
                     overwritten in the elapsed time.
                 </p>
                 <p>
                     When the process is done, you will get a message from dd
                     that no space is left on device and 750 GB have been
                     written. Get your Windows 8/8.1 DVD or a similar
-                    installation medium and click on the button at the top
-                    right and go to Shut Down... - Reboot. You will see the
-                    message “Please remove installation media and close tray
-                    (if any) then press ENTER”. The DVD gets ejected
-                    automatically, so put your Ubuntu DVD back into the case
-                    and insert the Windows DVD. Close the tray, press ENTER and
-                    then F12 repeatedly again.
+                    installation medium and click on the button at the top right
+                    and go to Shut Down... - Reboot. You will see the message
+                    “Please remove installation media and close tray (if any)
+                    then press ENTER”. The DVD gets ejected automatically, so
+                    put your Ubuntu DVD back into the case and insert the
+                    Windows DVD. Close the tray, press ENTER and then F12
+                    repeatedly again.
                 </p>
                 <p>
                     This time however, don't boot from anywhere, but choose the
@@ -146,10 +147,10 @@
                     labeled (C:). Right-click it and choose “Shrink Volume” and
                     enter the amount you want for your Linux installation. I
                     chose 100 GB, so that would be 102400 MB. Now repeat the
-                    disk cleanup and defragmentation procedure. This should
-                    just take a minute as the system is clean. When you are
-                    ready, reboot with the Ubuntu DVD inside the tray and start
-                    the menu with F12.
+                    disk cleanup and defragmentation procedure. This should just
+                    take a minute as the system is clean. When you are ready,
+                    reboot with the Ubuntu DVD inside the tray and start the
+                    menu with F12.
                 </p>
                 <p>
                     Go into “System Setup” again, then navigate to the
@@ -164,19 +165,19 @@
                     your language. On the next screen click “Continue” again.
                     Now you should see the “Installation Type” dialog, so
                     choose “Do something else”. You will see a list of all the
-                    partitions on your current system. On this system there
-                    were 2 NTFS partitions, one EFI partition and a free space
-                    of 102400 MB listed. Rightclick the free space which you
-                    prepared in Windows before and enter the number of
-                    Megabytes your RAM has. It most likely will be 8GB, so
-                    enter 8192 MB. Change the partition type to swap and click
-                    OK. A swap partition has just been created. Rightclick the
-                    rest of this free space and choose ext4 filesystem. Click
-                    on mount point and choose / . When you are sure that you
-                    assigned those two partitions correctly, click next to
-                    install Ubuntu. Go through all the dialogs, enter your
-                    hostname, username, time settings etc. and in about 15
-                    minutes the installation is done.
+                    partitions on your current system. On this system there were
+                    2 NTFS partitions, one EFI partition and a free space of
+                    102400 MB listed. Rightclick the free space which you
+                    prepared in Windows before and enter the number of Megabytes
+                    your RAM has. It most likely will be 8GB, so enter 8192 MB.
+                    Change the partition type to swap and click OK. A swap
+                    partition has just been created. Rightclick the rest of this
+                    free space and choose ext4 filesystem. Click on mount point
+                    and choose / . When you are sure that you assigned those two
+                    partitions correctly, click next to install Ubuntu. Go
+                    through all the dialogs, enter your hostname, username,
+                    time settings etc. and in about 15 minutes the installation
+                    is done.
                 </p>
                 <p>
                     If everything went fine, your system should reboot and the
@@ -194,11 +195,11 @@
                     (<a href="https://www.gnu.org/software/grub/">GRUB</a>) and
                     you will only be able to boot into Windows. I am not sure
                     why it happens on this laptop and I have tried several
-                    solutions to install Ubuntu with Secureboot enabled, but
-                    to no avail. There have been several reports of people
-                    having problems with Linux/Windows 8 dual boot
-                    installations, which most likely has something to do with
-                    UEFI and the Secureboot feature.
+                    solutions to install Ubuntu with Secureboot enabled, but to
+                    no avail. There have been several reports of people having
+                    problems with Linux/Windows 8 dual boot installations, which
+                    most likely has something to do with UEFI and the Secureboot
+                    feature.
                 <p>
                     Written by Christian Heinrichs - Last update: 09/24/2017
                 </p>

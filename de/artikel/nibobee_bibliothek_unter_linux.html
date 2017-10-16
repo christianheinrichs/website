@@ -65,7 +65,7 @@
                   <a href="https://wiki.debian.org/apt-get">apt-get</a>,
                   <a href="https://www.archlinux.org/pacman/">pacman</a>
                   oder <a href="http://yum.baseurl.org">yum</a><br><br>
-                
+
                 Der Benutzerfreundlichkeit wegen empfehle ich die zweite Option.
                 Also gib folgendes ein:<br>
             </p>
@@ -110,12 +110,12 @@
                 </div>
                 <p>
                     Jetzt hängen wir an einem neuen Problem fest ohne es zu
-                    realisieren. Die Macher der CD haben das
-                    include-Verzeichnis für Linux anders gebündelt als für
-                    Windows. Das include-Verzeichnis ist tatsächlich existent!
-                    Jedoch ist es im src-Ordner vorhanden und heisst nibobee
-                    anstatt include. Keine Sorge, dieses Problem wird in ein
-                    paar Momenten gelöst.
+                    realisieren. Die Macher der CD haben das include-Verzeichnis
+                    für Linux anders gebündelt als für Windows. Das
+                    include-Verzeichnis ist tatsächlich existent! Jedoch ist es
+                    im src-Ordner vorhanden und heisst nibobee anstatt include.
+                    Keine Sorge, dieses Problem wird in ein paar Momenten
+                    gelöst.
                 </p>
                 <p>
                     Wenn Du nun das Verzeichnis prüfst, findest Du die Ordner
@@ -183,13 +183,13 @@
                 <p>
                     Das ist völlig normal und ich werde jetzt erklären was
                     soeben geschehen ist. Der Makefile in diesem Verzeichnis
-                    benutzt relative Pfade anstelle von absoluten Pfaden. Wie
-                    Du sehen kannst, tritt das Problem wegen der relativen Pfade
+                    benutzt relative Pfade anstelle von absoluten Pfaden. Wie Du
+                    sehen kannst, tritt das Problem wegen der relativen Pfade
                     auf. Hier gekennzeichnet als Punkte: <span>../../</span><br>
                     Also habe ich den Makefile modifiziert, um dieses Problem
                     zu beheben. Downloade die Datei
-                    <a href="https://gist.github.com/christianheinrichs/a8cbbeb299c7f3a79b6a/download">hier</a>
-                    und ersetze den Standard-Makefile.
+                    <a href="https://gist.github.com/christianheinrichs/a8cbbeb299c7f3a79b6a/download">
+                        hier</a> und ersetze den Standard-Makefile.
                 </p>
                 <p>
                     Schaut man auf die diff-Datei, sieht man die Änderungen:
@@ -261,9 +261,9 @@
                 <p>
                     Ich habe die relativen Pfade so geändert, dass sie auf unser
                     /opt/nibobeelib/ Verzeichnis verweisen. Warum? Auf diesem
-                    Weg können wir den C-Quelltext von überall aus ohne
-                    Probleme kompilieren. Ausserdem habe ich den „clean“-Befehl
-                    so geändert, dass er ebenfalls .xhex Dateien löscht, da der
+                    Weg können wir den C-Quelltext von überall aus ohne Probleme
+                    kompilieren. Ausserdem habe ich den „clean“-Befehl so
+                    geändert, dass er ebenfalls .xhex Dateien löscht, da der
                     Standard-Makefile das nicht macht. Ab diesem Zeitpunkt
                     solltest Du schon den originalen Makefile mit der
                     modifizierten Version ersetzt haben.
@@ -289,9 +289,10 @@
                 </div>
                 <p>
                     Jetzt downloade den Script
-                    <a href="https://gist.github.com/christianheinrichs/ab750c916ef11d42d5de/download">hier</a>
-                    und tue diesen in den „calibration“-Ordner oder kopiere den
-                    folgenden Code in eine Datei namens calibrate.sh,<br>
+                    <a href="https://gist.github.com/christianheinrichs/ab750c916ef11d42d5de/download">
+                        hier</a> und tue diesen in den „calibration“-Ordner oder
+                    kopiere den folgenden Code in eine Datei namens
+                    calibrate.sh,<br>
                     welche in dem soeben erwähnten Ordner „calibration“
                     gespeichert werden sollte:
                 </p>
@@ -329,17 +330,17 @@
                     </code>
                 </div>
                 <p>
-                    Du wirst die grüne Programmierungs-LED (LED4) einmal
-                    blinken sehen und eine Reihe von Meldungen in der Konsole.
-                    Der Script flasht die Sicherungen HFUSE, LFUSE und zu guter
+                    Du wirst die grüne Programmierungs-LED (LED4) einmal blinken
+                    sehen und eine Reihe von Meldungen in der Konsole. Der
+                    Script flasht die Sicherungen HFUSE, LFUSE und zu guter
                     Letzt, den FLASH-Speicher.
                 </p>
                 <p>
                     Falls alles gut gelaufen ist, befindet sich der NIBObee nun
                     im Kalibrierungsmodus und Du musst ihn kalibrieren. Finde
                     eine weisse oder schwarze Oberfläche, idealerweise ein Stück
-                    weisses Papier und ein Stück schwarzes Papier. Platziere
-                    den Roboter auf eine weisse Oberfläche und drücke den linken
+                    weisses Papier und ein Stück schwarzes Papier. Platziere den
+                    Roboter auf eine weisse Oberfläche und drücke den linken
                     Fühler nach hinten. Die gelben LEDs blinken 5 mal. Platziere
                     den Roboter auf eine schwarze Oberfläche und drücke den
                     rechten Fühler nach hinten. Die roten LEDS 5 blinken 5 mal.
@@ -351,8 +352,8 @@
                     EEPROM-Speicher abgespeichert haben.
                 </p>
                 <p>
-                    Du hast dieses Tutorial fast abgeschlossen. Wir werden
-                    jetzt das erste Programm kompilieren.<br>
+                    Du hast dieses Tutorial fast abgeschlossen. Wir werden jetzt
+                    das erste Programm kompilieren.<br>
                     Gehe wie folgt ins „program1“-Verzeichnis:
                 </p>
                 <div class="codeblock">

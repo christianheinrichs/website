@@ -52,11 +52,20 @@
             </p>
             <p>
                 Now you have at least 2 options:<br>
-                - Install the 4 programs <a href="http://www.nongnu.org/avrdude/">avrdude</a>, <a href="http://www.nongnu.org/avr-libc/">avr-libc</a>, <a href="https://www.gnu.org/software/binutils/">binutils</a> and <a href="https://www.gnu.org/software/gcc/">gcc</a> from the tar archives by unpacking and compiling them<br>
-                - Download and installation of the programs with package management software like <a href="https://wiki.debian.org/apt-get">apt-get</a>, <a href="https://www.archlinux.org/pacman/">pacman</a> or <a href="http://yum.baseurl.org/">yum</a><br><br>
-                
-                Out of comfortability I recommend using the second option.
-                So type:
+                - Install the 4 programs
+                  <a href="http://www.nongnu.org/avrdude/">avrdude</a>,
+                  <a href="http://www.nongnu.org/avr-libc/">avr-libc</a>,
+                  <a href="https://www.gnu.org/software/binutils/">binutils</a>
+                  and <a href="https://www.gnu.org/software/gcc/">gcc</a> from
+                  the tar archives by unpacking and compiling them<br>
+                - Download and installation of the programs with package
+                  management software like
+                  <a href="https://wiki.debian.org/apt-get">apt-get</a>,
+                  <a href="https://www.archlinux.org/pacman/">pacman</a> or
+                  <a href="http://yum.baseurl.org/">yum</a><br><br>
+
+                Out of comfortability I recommend using the second option. So
+                type:
             </p>
                 <div class="codeblock">
                     <code>
@@ -148,8 +157,9 @@
                     </code>
                 </div>
                 <p>
-                    Try to compile the program by typing <code class="command">make</code> .<br>
-                    But, what just happened? The console now shows us:
+                    Try to compile the program by typing
+                    <code class="command">make</code> .<br> But, what just
+                    happened? The console now shows us:
                 </p>
                 <div class="codeblock">
                     <code>
@@ -167,9 +177,14 @@
                     This is completely normal and I will now explain what just
                     happened. The Makefile in this folder uses relative paths
                     instead of absolute paths. As you can see, the problem
-                    occurs with the relative paths, seen here as dots: <span>../../</span><br>
+                    occurs with the relative paths, seen here as dots:
+                    <span>../../</span><br>
+
                     Thus, I have modified the Makefile to take care of that
-                    problem. Download it <a href="https://gist.github.com/christianheinrichs/a8cbbeb299c7f3a79b6a/download">here</a> and replace the default Makefile.
+                    problem. Download it
+                    <a href="https://gist.github.com/christianheinrichs/a8cbbeb299c7f3a79b6a/download">
+                        here
+                    </a> and replace the default Makefile.
                 </p>
                 <p>
                     Looking at the diff file, you can see the changes:
@@ -267,8 +282,15 @@
                     </code>
                 </div>
                 <p>
-                    Now, download the script <a href="https://gist.github.com/christianheinrichs/ab750c916ef11d42d5de/download">here</a> and put it into the “calibration” folder or copy and paste the following code into a file called calibrate.sh,<br>
-                    which should be saved in the just recently mentioned folder “calibration”:
+                    Now, download the script
+                    <a href="https://gist.github.com/christianheinrichs/ab750c916ef11d42d5de/download">
+                        here
+                    </a> and put it into the “calibration” folder or copy and
+                    paste the following code into a file called calibrate.sh,
+                    <br>
+
+                    which should be saved in the just recently mentioned folder
+                    “calibration”:
                 </p>
                 <div class="codeblock">
                     <code>
@@ -317,7 +339,7 @@
                     yellow LEDs blink 5 times. Place the robot on a black
                     surface now and push back the right feeler. You will see
                     the red LEDs blink 5 times.
-                </p>     
+                </p>
                 <p>
                     To save the calibrated values, push both feelers forward
                     simultaneously and all 4 LEDs blink 5 times. The NIBObee

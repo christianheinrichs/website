@@ -38,17 +38,16 @@
         Getting the NIBObee library to work on Linux
       </h2>
       <p>
-        I simply wrote this tutorial, because I didn't find any NIBObee
-        library installation tutorial for Linux. The system I am using
-        here is Ubuntu 14.04 LTS Trusty Tahr. If you use Debian, you
-        should get along well with this tutorial. If you have bought a
-        NIBObee robot, you most likely got it with a CD. The only
-        relevant folder you will need for this is “linux”.
+        I simply wrote this tutorial, because I didn't find any NIBObee library
+        installation tutorial for Linux. The system I am using here is Ubuntu
+        14.04 LTS Trusty Tahr. If you use Debian, you should get along well with
+        this tutorial. If you have bought a NIBObee robot, you most likely got
+        it with a CD. The only relevant folder you will need for this is
+        “linux”.
       </p>
       <p>
-        Open the root directory of the CD-ROM and look at the content.
-        You will see 5 tar archives containing 4 programs and the
-        NIBObee library.
+        Open the root directory of the CD-ROM and look at the content. You will
+        see 5 tar archives containing 4 programs and the NIBObee library.
       </p>
       <p>
         Now you have at least 2 options:<br>
@@ -56,16 +55,15 @@
           <a href="http://www.nongnu.org/avrdude/">avrdude</a>,
           <a href="http://www.nongnu.org/avr-libc/">avr-libc</a>,
           <a href="https://www.gnu.org/software/binutils/">binutils</a>
-          and <a href="https://www.gnu.org/software/gcc/">gcc</a> from
-          the tar archives by unpacking and compiling them<br>
-        - Download and installation of the programs with package
-          management software like
+          and <a href="https://www.gnu.org/software/gcc/">gcc</a> from the tar
+          archives by unpacking and compiling them<br>
+        - Download and installation of the programs with package management
+          software like
           <a href="https://wiki.debian.org/apt-get">apt-get</a>,
           <a href="https://www.archlinux.org/pacman/">pacman</a> or
           <a href="http://yum.baseurl.org/">yum</a><br><br>
 
-        Out of comfortability I recommend using the second option. So
-        type:
+        Out of comfortability I recommend using the second option. So type:
       </p>
         <div class="codeblock">
           <code>
@@ -73,9 +71,8 @@
           </code>
         </div>
         <p>
-          After you have done that, you have still some work to do.
-          First, we need to make a project directory for our NIBObee
-          projects.<br>
+          After you have done that, you have still some work to do. First, we
+          need to make a project directory for our NIBObee projects.<br>
           Here we will create this folder on the desktop with:
         </p>
         <div class="codeblock">
@@ -84,9 +81,9 @@
           </code>
         </div>
         <p>
-          Assuming you are using the CD, type the following commands
-          to change into the CD-ROM directory and then copy the
-          “nibobeelib” tar file to your newly created directory:
+          Assuming you are using the CD, type the following commands to change
+          into the CD-ROM directory and then copy the “nibobeelib” tar file to
+          your newly created directory:
         </p>
         <div class="codeblock">
           <code>
@@ -95,8 +92,8 @@
           </code>
         </div>
         <p>
-          Now, we can go back into the projects folder and extract
-          the .tgz archive:
+          Now, we can go back into the projects folder and extract the .tgz
+          archive:
         </p>
         <div class="codeblock">
           <code>
@@ -105,34 +102,32 @@
           </code>
         </div>
         <p>
-          We are also stuck at another problem without even realizing
-          it. The makers of the CD packaged the include directory for
-          Linux differently as they did for Windows. The include
-          directory is in fact there! But it is located in the src
-          folder and called nibobee instead of include. But don't
-          worry, this problem will get solved in a few moments.
+          We are also stuck at another problem without even realizing it. The
+          makers of the CD packaged the include directory for Linux differently
+          as they did for Windows. The include directory is in fact there! But
+          it is located in the src folder and called nibobee instead of include.
+          But don't worry, this problem will get solved in a few moments.
         </p>
         <p>
-          If you now check the directory, you will find the folders
-          doc, hex, lib and src. And the .tgz file.
+          If you now check the directory, you will find the folders doc, hex,
+          lib and src. And the .tgz file.
         </p>
           <ul>
             <li>
-              doc contains documentation on the various functions
-              of the NIBObee library. If you want to study the
-              NIBObee library in more detail, you should
-              definitely check it out!
+              doc contains documentation on the various functions of the NIBObee
+              library. If you want to study the NIBObee library in more detail,
+              you should definitely check it out!
             </li>
             <li>
-              hex contains interesting precompiled .hex files
-              which you can directly transfer to your robot
+              hex contains interesting precompiled .hex files which you can
+              directly transfer to your robot
             </li>
             <li>
               lib contains the library files
             </li>
             <li>
-              src contains the source code, include files,
-              tutorial programs and much more
+              src contains the source code, include files, tutorial programs and
+              much more
             </li>
           </ul>
         <p>
@@ -145,10 +140,10 @@
           </code>
         </div>
         <p>
-          Now you have all files you need, nicely organized in the
-          /opt/ folder of your Linux distribution.<br>
-          Let's copy over a program from the /opt/nibobeelib/ folder
-          and change into it:
+          Now you have all files you need, nicely organized in the /opt/ folder
+          of your Linux distribution.<br>
+          Let's copy over a program from the /opt/nibobeelib/ folder and change
+          into it:
         </p>
         <div class="codeblock">
           <code>
@@ -158,8 +153,8 @@
         </div>
         <p>
           Try to compile the program by typing
-          <code class="command">make</code> .<br> But, what just
-          happened? The console now shows us:
+          <code class="command">make</code> .<br> But, what just happened? The
+          console now shows us:
         </p>
         <div class="codeblock">
           <code>
@@ -174,14 +169,14 @@
           </code>
         </div>
         <p>
-          This is completely normal and I will now explain what just
-          happened. The Makefile in this folder uses relative paths
-          instead of absolute paths. As you can see, the problem
-          occurs with the relative paths, seen here as dots:
+          This is completely normal and I will now explain what just happened.
+          The Makefile in this folder uses relative paths instead of absolute
+          paths. As you can see, the problem occurs with the relative paths,
+          seen here as dots:
           <span>../../</span><br>
 
-          Thus, I have modified the Makefile to take care of that
-          problem. Download it
+          Thus, I have modified the Makefile to take care of that problem.
+          Download it
           <a href="https://gist.github.com/christianheinrichs/a8cbbeb299c7f3a79b6a/download">
             here
           </a> and replace the default Makefile.
@@ -255,17 +250,16 @@
         </div>
         <p>
           I changed the relative paths so that they point to our
-          /opt/nibobeelib/ directory. Why? This way we can compile
-          the C source code from any folder location without problems.
-          Furthermore, I modified the “clean” function to also delete
-          .xhex files, as the default Makefile doesn't do that. By
-          now, you should have replaced the original Makefile with
-          the modified version.
+          /opt/nibobeelib/ directory. Why? This way we can compile the C source
+          code from any folder location without problems. Furthermore, I
+          modified the “clean” function to also delete .xhex files, as the
+          default Makefile doesn't do that. By now, you should have replaced the
+          original Makefile with the modified version.
         </p>
         <p>
-          Alright, before we compile the program1.c program, we have
-          to first transfer a .hex file which calibrates the odometry
-          sensors of the robot.<br>
+          Alright, before we compile the program1.c program, we have to first
+          transfer a .hex file which calibrates the odometry sensors of the
+          robot.<br>
           First make a new project directory called “calibration”:
         </p>
         <div class="codeblock">
@@ -285,8 +279,8 @@
           Now, download the script
           <a href="https://gist.github.com/christianheinrichs/ab750c916ef11d42d5de/download">
             here
-          </a> and put it into the “calibration” folder or copy and
-          paste the following code into a file called calibrate.sh,
+          </a> and put it into the “calibration” folder or copy and paste the
+          following code into a file called calibrate.sh,
           <br>
 
           which should be saved in the just recently mentioned folder
@@ -309,12 +303,11 @@
           </code>
         </div>
         <p>
-          For this script, I just took the values and commands of the
-          default Makefile and adapted them to a .hex file, because
-          nothing has to be compiled. Okay, flip on the power switch
-          of your NIBObee and connect it via USB to your computer or
-          laptop, then go into the “calibration” directory and
-          transfer the calibration file to the robot with the
+          For this script, I just took the values and commands of the default
+          Makefile and adapted them to a .hex file, because nothing has to be
+          compiled. Okay, flip on the power switch of your NIBObee and connect
+          it via USB to your computer or laptop, then go into the “calibration”
+          directory and transfer the calibration file to the robot with the
           following 3 commands:
         </p>
         <div class="codeblock">
@@ -325,30 +318,27 @@
           </code>
         </div>
         <p>
-          You will see the green programming LED (LED4) flashing once
-          and a bunch of messages in your console. The script is
-          flashing the fuses HFUSE AND LFUSE and, last but not least,
-          the FLASH memory.
+          You will see the green programming LED (LED4) flashing once and a
+          bunch of messages in your console. The script is flashing the fuses
+          HFUSE AND LFUSE and, last but not least, the FLASH memory.
         </p>
         <p>
-          If everything went fine, the NIBObee is now in calibration
-          mode and you have to calibrate it. Find a white surface
-          and a black surface, ideally a piece of white paper and a
-          piece of black paper. Now place the robot on a white
-          surface and push back the left feeler. You will see the the
-          yellow LEDs blink 5 times. Place the robot on a black
-          surface now and push back the right feeler. You will see
-          the red LEDs blink 5 times.
+          If everything went fine, the NIBObee is now in calibration mode and
+          you have to calibrate it. Find a white surface and a black surface,
+          ideally a piece of white paper and a piece of black paper. Now place
+          the robot on a white surface and push back the left feeler. You will
+          see the the yellow LEDs blink 5 times. Place the robot on a black
+          surface now and push back the right feeler. You will see the red LEDs
+          blink 5 times.
         </p>
         <p>
           To save the calibrated values, push both feelers forward
-          simultaneously and all 4 LEDs blink 5 times. The NIBObee
-          should now have saved the calibration values into its
-          EEPROM memory.
+          simultaneously and all 4 LEDs blink 5 times. The NIBObee should now
+          have saved the calibration values into its EEPROM memory.
         </p>
         <p>
-          You almost completed this tutorial. We are now going to
-          compile the first program.<br>
+          You almost completed this tutorial. We are now going to compile the
+          first program.<br>
           Go into the program1 folder like this:
         </p>
         <div class="codeblock">
@@ -357,8 +347,8 @@
           </code>
         </div>
         <p>
-          Then type <code class="command">make</code> to compile the
-          code and transfer the .hex file with:
+          Then type <code class="command">make</code> to compile the code and
+          transfer the .hex file with:
         </p>
         <div class="codeblock">
           <code>
@@ -366,15 +356,14 @@
           </code>
         </div>
         <p>
-          When it's finished you should see the red LED1 blinking
-          constantly in the same pattern. Congratulations, you
-          successfully installed the NIBObee library on Linux,
-          learned a little bit about Makefile debugging, calibrated
-          your NIBObee robot, compiled and transferred your first
-          program to the robot!
+          When it's finished you should see the red LED1 blinking constantly in
+          the same pattern. Congratulations, you successfully installed the
+          NIBObee library on Linux, learned a little bit about Makefile
+          debugging, calibrated your NIBObee robot, compiled and transferred
+          your first program to the robot!
         <p>
-          Thanks to nicai-systems for creating the NIBObee robot and
-          writing such good tutorials!
+          Thanks to nicai-systems for creating the NIBObee robot and writing
+          such good tutorials!
         </p>
         <p>
           Written by Christian Heinrichs - Last update: 09/24/2017

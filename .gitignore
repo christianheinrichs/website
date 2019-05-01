@@ -1,2 +1,5 @@
 # Ignore backup files with the ~ extension
 *~
+
+# Ignore .swp files
+*.swp

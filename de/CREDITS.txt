@@ -10,10 +10,6 @@ GitHub Icon
 Autor: Lunar Templates
 Quelle: http://www.softicons.com/social-media-icons/rounded-square-social-icons-by-lunar-templates/github-icon
 
-Launchpad Icon
-Autor: Launchpad
-Quelle: https://launchpad.net/@@/launchpad-logo
-
 Stack Overflow Icon
 Autor: G. Pritiranjan Das
 Quelle: http://www.softicons.com/social-media-icons/social-media-icons-by-g.-pritiranjan-das/stack-overflow-icon

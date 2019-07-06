@@ -7,8 +7,13 @@ Codecademy значок
 Источник: http://a714.phobos.apple.com/us/r30/Purple/v4/01/a1/3d/01a13d32-c291-b7c0-2b0d-ae1615bba381/mzl.cuoisqnr.png
 
 GitHub значок
-Автор: Lunar Templates
-Источник: http://www.softicons.com/social-media-icons/rounded-square-social-icons-by-lunar-templates/github-icon
+Автор: GitHub
+Источник: https://github.com/logos
+
+GitLab значок
+Автор: GitLab
+Источник: https://about.gitlab.com/press/press-kit/#logos
+License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 Stack Overflow значок
 Автор: G. Pritiranjan Das

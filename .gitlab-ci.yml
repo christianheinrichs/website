@@ -1,0 +1,11 @@
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+  - printf "Running CI...\n"
+  artifacts:
+    paths:
+    - public
+  only:
+  - master

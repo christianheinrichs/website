@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The identicon quest</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css" />
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <div id="header">
+      <h1>~christianheinrichs.gitlab.io</h1>
+      Language: <a href="/de/artikel/die-identicon-quest.html">de</a> / <a href="/articles/the-identicon-quest.html">en</a> / <a href="/ru/index.html">ru</a>
+    </div>
+    <div id="navigation">
+      <ul>
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/articles.html">Articles</a>
+        </li>
+        <li>
+          <a href="/projects.html">Projects</a>
+        </li>
+        <li>
+          <a href="/accounts.html">My accounts</a>
+        </li>
+        <li>
+          <a href="/contact.html">Contact</a>
+        </li>
+        <li>
+          <a href="/about.html">About this website</a>
+        </li>
+      </ul>
+    </div>
+    <div id="content">
+      <h2>
+        The identicon quest
+      </h2>
+      <p>
+        So, for a long time I have been trying to find the perfect avatar to use
+        across all of my personal internet accounts. To most people this
+        probably doesn't seem like a big deal and in all honesty, it isn't. It's
+        just one of those trivial things that, for some reason, start making
+        your brain itch. Usually, I would stick to a QR code generated via the GUI
+        tool QtQr, where my full name, email address and location (and some time
+        ago, my public PGP key signature) was neatly encoded in a tiny QR
+        picture. In my opinion it looked fine and the filesize was always pretty
+        low which is a plus in this context.
+      </p>
+      <p>
+        However, somewhere along the way I started reading about Gravatars,
+        Identicons, people creating their own icons and what not and that made
+        me think. Since I don't possess the visual artistic skills to create my
+        own avatar, I started to dig in those topics and was somewhat
+        overwhelmed in the beginning. In terms of generating Gravatars, the
+        procedure is to calculate a MD5 sum of your email address (which must be
+        lowercase) and making a so called Gravatar from it. One way to calculate
+        that specific MD5 sum on a Linux machine is by typing:
+      </p>
+      <div class="codeblock">
+        <code>
+          printf "firstname.lastname@emailprovider.org" | md5sum
+        </code>
+      </div>
+
+      <p>
+        But you can also use:
+      </p>
+
+      <div class="codeblock">
+        <code>
+          echo -e "firstname.lastname@emailprovider.org | md5sum
+        </code>
+      </div>
+      <p>
+        A normal <span class="command">echo</span> command would in this case
+        not suffice, since the newline needs to be trimmed. The result will be a
+        unique MD5 hash of your email address, which you then put into a
+        Gravatar URL. In this example, that URL would be:
+      </p>
+
+      <a href="https://www.gravatar.com/avatar/1252aa5399645d772a7df88192392c8f">
+        https://www.gravatar.com/avatar/1252aa5399645d772a7df88192392c8f
+      </a>
+
+      <p>
+        Without the <i><b>d</b></i> parameter however, that URL is useless, at least
+        visually speaking. When you have finally constructed your personal
+        Gravatar URL, you can familiarize yourself with the parameters. Let's do
+        this step by step, alphabetically. The <i><b>d</b></i> parameter accepts 8 values
+        which are 404, blank, identicon, monsterid, mp, robohash, retro and
+        wavatar. Depending on what value you supply, the image will change
+        either to a 404 not found message, a blank image, an identicon, a
+        Monster ID, a generic “mystery person”, a robohash, a retro pixelated
+        image or a wavatar. The <i><b>f</b></i> parameter (as in force), if set to y
+        (as in yes), will force the image to always load the default blue and
+        white Gravatar image. Now the <i><b>r</b></i> parameter is where it gets a little
+        complicated. Depending on how you rate your image, you can assign this
+        parameter the value <i><b>g</b></i>, <i><b>pg</b></i>, <i><b>r</b></i>
+        or <i><b>x</b></i>. Last, but not least there is the <i><b>s</b></i>
+        parameter to tell Gravatar what size the requested image should be. Note
+        however, that the maximum value is capped at 2048 pixels. If you're
+        interested, read more about the workings of Gravatar
+        <a href="https://en.gravatar.com/site/implement/images/">here</a>.
+      </p>
+
+      <p>
+        A simple 128x128 pixel identicon with the above hash would be constructed like so:
+      </p>
+        
+      <a href="https://www.gravatar.com/avatar/1252aa5399645d772a7df88192392c8f?d=identicon&s=128">
+        https://www.gravatar.com/avatar/1252aa5399645d772a7df88192392c8f?d=identicon&s=128
+      </a>
+    
+      <p>
+        GitHub <a href="https://github.blog/2013-08-14-identicons/">implemented</a>
+        its own version of identicons (which use a completely different
+        algorithm) back in 2013. Instead of using the MD5 hash of your email
+        address, it instead hashes your user ID (i.e. username) and flips so
+        called “pixel switches” depending on even and odd values.
+      </p>
+      <p>
+        The StackExchange network goes even further and in addition to the MD5
+        sum uses a salt for security reasons according to
+        <a href="https://meta.stackexchange.com/questions/204523/unexpectedly-changing-identicon/204540#204540">m0sa</a>.
+        If you're not registered with an email address on their website, they
+        create an identicon based on your last known IP address which is
+        explained <a href="https://meta.stackexchange.com/questions/17443/how-is-the-default-user-avatar-generated/17444#17444">here</a>.
+        This, I assume, is also hashed and salted.
+      </p>
+
+      <p>
+        I try to use the identicon assigned to my current email address on
+        almost all of my accounts. On Codecademy I simply uploaded the identicon
+        although it would be nice if that website provides a remote URL function
+        sometime in the future instead of demanding the user to download an
+        image just to upload it. GitLab automatically detected my correct
+        Gravatar identicon when I didn't provide an image and the size defaults
+        to 800x800 pixels thanks to the s=800 parameter in the URL. There are
+        some exceptions though. On BitBucket, I am using an automatically
+        generated image of my initials. On GitHub, I use a GitHub identicon. On
+        the StackExchange network, my identicon is completely different from
+        what it should be, which is most likely explained by the fact that they
+        combine the actual checksum with a random salt value, probably one of
+        the most interesting approaches to the “Identicon problem”. In addition,
+        it enhances security.
+      </p>
+
+      <p>
+        Conclusion: Personally, I like the Identicon approach the most. Not
+        just visually speaking, but also in terms of usability. And yes,
+        unfortunately there are possible security caveats such as email address,
+        IP and activity tracking in addition to possible MD5 collisions. The
+        internet was never a safe place and never will be, just like real life.
+      </p>
+
+      <p>
+        What's your opinion on this topic and how do you handle your personal user avatars?
+      </p>
+      <p>
+        Last update: 07/17/2019
+      </p>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>

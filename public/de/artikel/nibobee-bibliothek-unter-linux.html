@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <title>Installieren der NIBObee Bibliothek auf Linux</title>
+    <title>Installieren der NIBObee-Bibliothek auf Linux</title>
     <link rel="stylesheet" type="text/css" href="/stylesheet.css" />
     <link rel="icon" type="image/png" href="/img/favicon.png" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -14,7 +14,7 @@
     <div id="navigation">
       <ul>
         <li>
-          <a href="/de/index.html">Home</a>
+          <a href="/de/index.html">Startseite</a>
         </li>
         <li>
           <a href="/de/artikel.html">Artikel</a>
@@ -29,20 +29,20 @@
           <a href="/de/kontakt.html">Kontakt</a>
         </li>
         <li>
-          <a href="/de/ueber.html">Über diese Website</a>
+          <a href="/de/ueber.html">Über diese Internetseite</a>
         </li>
       </ul>
     </div>
     <div id="content">
       <h2>
-        Installieren der NIBObee Bibliothek auf Linux
+        Installieren der NIBObee-Bibliothek auf Linux
       </h2>
       <p>
-        Da ich im Internet keine NIBObee-Bibliothek Installationstutorials für
+        Da ich im Internet keine NIBObee-Bibliothek Installationsanleitungen für
         Linux finden konnte, habe ich dieses Dokument verfasst. Das
         Betriebssystem welches ich hierfür nutze ist Ubuntu 14.04 LTS Trusty
-        Tahr. Falls Du Debian verwendest, solltest Du mit diesem Tutorial gut zu
-        Recht kommen. Falls Du einen NIBObee-Roboter gekauft hast, wurde diesem
+        Tahr. Falls Du Debian verwendest, solltest Du mit dieser Anleitung gut
+        zurechtkommen. Falls Du einen NIBObee-Roboter gekauft hast, wurde diesem
         höchstwahrscheinlich eine CD beigelegt. Der einzig relevante Ordner, den
         Du hierfür brauchst ist „linux“.
       </p>
@@ -58,7 +58,7 @@
           <a href="https://www.gnu.org/software/binutils/">binutils</a> und
           <a href="https://www.gnu.org/software/gcc/">gcc</a> von den
           tar-Archiven durch das Entpacken und Kompilieren<br>
-        - Herunterladen und Installation der Software mit einem
+        - Herunterladen und Installation der Programme mit einem
           Paketverwaltungssystem wie
           <a href="https://wiki.debian.org/apt-get">apt-get</a>,
           <a href="https://www.archlinux.org/pacman/">pacman</a> oder
@@ -181,9 +181,9 @@
           Problem wegen der relativen Pfade auf. Hier gekennzeichnet als
           Punkte: <span>../../</span><br>
           Also habe ich den Makefile modifiziert, um dieses Problem zu beheben.
-          Downloade die Datei
+          Lade die Datei
           <a href="https://gist.github.com/christianheinrichs/a8cbbeb299c7f3a79b6a/download">
-            hier</a> und ersetze den Standard-Makefile.
+            hier</a> herunter und ersetze den Standard-Makefile.
         </p>
         <p>
           Schaut man auf die diff-Datei, sieht man die Änderungen:
@@ -256,7 +256,7 @@
           Ich habe die relativen Pfade so geändert, dass sie auf unser
           /opt/nibobeelib/ Verzeichnis verweisen. Warum? Auf diesem Weg können
           wir den C-Quelltext von überall aus ohne Probleme kompilieren.
-          Ausserdem habe ich den „clean“-Befehl so geändert, dass er ebenfalls
+          Außerdem habe ich den „clean“-Befehl so geändert, dass er ebenfalls
           .xhex Dateien löscht, da der Standard-Makefile das nicht macht. Ab
           diesem Zeitpunkt solltest Du schon den originalen Makefile mit der
           modifizierten Version ersetzt haben.
@@ -281,9 +281,9 @@
           </code>
         </div>
         <p>
-          Jetzt downloade den Script
+          Jetzt lade den Skript
           <a href="https://gist.github.com/christianheinrichs/ab750c916ef11d42d5de/download">
-            hier</a> und tue diesen in den „calibration“-Ordner oder kopiere den
+            hier</a> herunter und tue diesen in den „calibration“-Ordner oder kopiere den
           folgenden Code in eine Datei namens calibrate.sh,<br>
           welche in dem soeben erwähnten Ordner „calibration“ gespeichert werden
           sollte:
@@ -305,13 +305,13 @@
           </code>
         </div>
         <p>
-          Für diesen Script habe ich die Werte und Befehle aus dem
+          Für diesen Skript habe ich die Werte und Befehle aus dem
           Standard-Makefile entnommen und an eine .hex-Datei angepasst, weil
-          nichts kompiliert werden muss. Okay, schalte den POWER-Schalter deines
+          nichts kompiliert werden muss. In Ordnung, schalte den POWER-Schalter deines
           NIBObees ein und verbinde den Roboter via USB mit deinem Computer oder
           Laptop,<br>
           dann gehst du in das „calibration“-Verzeichnis und überträgst die
-          Kalibrationsdatei mit folgenden 3 Befehlen auf den Roboter:
+          Kalibrationsdatei mit folgenden drei Befehlen auf den Roboter:
         </p>
         <div class="codeblock">
           <code>
@@ -322,26 +322,26 @@
         </div>
         <p>
           Du wirst die grüne Programmierungs-LED (LED4) einmal blinken sehen und
-          eine Reihe von Meldungen in der Konsole. Der Script flasht die
+          eine Reihe von Meldungen in der Konsole. Der Skript flasht die
           Sicherungen HFUSE, LFUSE und zu guter Letzt, den FLASH-Speicher.
         </p>
         <p>
           Falls alles gut gelaufen ist, befindet sich der NIBObee nun im
           Kalibrierungsmodus und Du musst ihn kalibrieren. Finde eine weisse
-          oder schwarze Oberfläche, idealerweise ein Stück weisses Papier und
+          oder schwarze Oberfläche, idealerweise ein Stück weißes Papier und
           ein Stück schwarzes Papier. Platziere den Roboter auf eine weisse
           Oberfläche und drücke den linken Fühler nach hinten. Die gelben LEDs
-          blinken 5 mal. Platziere den Roboter auf eine schwarze Oberfläche und
-          drücke den rechten Fühler nach hinten. Die roten LEDS 5 blinken 5 mal.
+          blinken fünf mal. Platziere den Roboter auf eine schwarze Oberfläche und
+          drücke den rechten Fühler nach hinten. Die roten LEDS 5 blinken fünf mal.
         </p>
         <p>
           Um die Kalibrierungswerte zu speichern, drücke beide Fühler
-          gleichzeitig vorwärts und alle 4 LEDs blinken 5 mal. Der NIBObee
+          gleichzeitig vorwärts und alle vier LEDs blinken fünf mal. Der NIBObee
           sollte nun die Kalibrierungswerte in seinem EEPROM-Speicher
           abgespeichert haben.
         </p>
         <p>
-          Du hast dieses Tutorial fast abgeschlossen. Wir werden jetzt das erste
+          Du hast diese Anleitung fast abgeschlossen. Wir werden jetzt das erste
           Programm kompilieren.<br>
           Gehe wie folgt ins „program1“-Verzeichnis:
         </p>
@@ -368,7 +368,7 @@
           erstes Programm kompiliert, als auch auf den Roboter übertragen!
         </p>
         <p>
-          Letzte Aktualisierung: 12.04.2019
+          Letzte Aktualisierung: 19.02.2020
         </p>
         <a href="#top">An den Anfang dieser Seite zurückkehren</a>
     </div>

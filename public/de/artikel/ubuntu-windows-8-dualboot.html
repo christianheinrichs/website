@@ -14,7 +14,7 @@
     <div id="navigation">
       <ul>
         <li>
-          <a href="/de/index.html">Home</a>
+          <a href="/de/index.html">Startseite</a>
         </li>
         <li>
           <a href="/de/artikel.html">Artikel</a>
@@ -29,7 +29,7 @@
           <a href="/de/kontakt.html">Kontakt</a>
         </li>
         <li>
-          <a href="/de/ueber.html">Über diese Website</a>
+          <a href="/de/ueber.html">Über diese Internetseite</a>
         </li>
       </ul>
     </div>
@@ -47,12 +47,12 @@
         <p>
           Letztes Jahr und bis vor Kurzem hatte ich allerlei Probleme mit dem
           Einrichten einer funktionierenden Dualboot-Konfiguration auf diesem
-          Laptop und aus dem Grund habe ich dieses Tutorial geschrieben.
+          Laptop und aus dem Grund habe ich diese Anleitung geschrieben.
         </p>
         <p>
           Zuerst lädst Du das ISO-Abbild auf 
           <a href="https://www.ubuntu.com/download/desktop">Ubuntu.com</a>
-          runter. Brenne es auf eine DVD und erstelle ein Backup von all deinen
+          runter. Brenne es auf eine DVD und erstelle eine Sicherungskopie von all deinen
           wichtigen Dateien. Entferne alle Wechseldatenträger oder es können
           während des Vorgangs Daten verloren gehen. Lege die DVD ein, entferne
           das Ethernet-Kabel von deinem Laptop und schalte alle
@@ -60,14 +60,14 @@
         </p>
         <p>
           Wenn Du das Toshiba-Logo siehst, drücke wiederholt F12 bis das
-          Bootmenü erscheint. Boote von deinem DVD-Laufwerk. Das System wird
+          Boot-Menü erscheint. Starte von deinem DVD-Laufwerk. Das System wird
           anschließend die DVD starten und Du musst die Option „Try Ubuntu
           without installing it first“ auswählen. Dies ist der Live-CD Modus,
           von dem aus Du jetzt deine Festplatte formatieren wirst. Klicke auf
           das Dash-Logo oben links, gib „terminal“ ein und drücke ENTER. Um mehr
-          Übersicht zu haben, empfehle ich dir das Terminalfenster zu
-          maximieren. Drücke nun STRG+T und Du hast 2 Tabs in
-          deinem Terminal. Klicke auf den ersten Tab und tippe:
+          Übersicht zu haben, empfehle ich dir das Befehlszeilenfenster zu
+          maximieren. Drücke nun STRG+T und Du hast 2 Registerkarten in
+          deiner Befehlszeile. Klicke auf die erste Registerkarte und tippe:
         </p>
         <div class="codeblock">
           <code>
@@ -83,7 +83,7 @@
           Dieser Vorgang könnte eine Weile dauern und ich nehme an, dass Du 750
           GB auf deiner Toshiba-Festplatte hast. Es dauert etwas über 2 Stunden.
           Falls Du den Fortschritt von dd prüfen möchtest, ist dies der Moment
-          an dem der zweite Terminaltab hilfreich ist. Klicke drauf und tippe:
+          an dem die zweite Befehlszeilen-Registerkarte hilfreich ist. Klicke drauf und tippe:
         </p>
         <div class="codeblock">
           <code>
@@ -102,7 +102,7 @@
         <p>
           Dieser Befehl sendet ein unterbrechendes USR1-Signal an das dd
           Programm, welches anschließend seinen Fortschritt preisgibt, also
-          wechsel' zum ersten Tab und Du wirst sehen wie viele Gigabyte während
+          wechsel' zur ersten Registerkarte und Du wirst sehen wie viele Gigabyte während
           der Zeit überschrieben wurden.
         </p>
         <p>
@@ -113,19 +113,19 @@
           auf Herunterfahren... - Neustarten. Du wirst die Nachricht „Please
           remove installation media and close tray (if any) then press ENTER“
           sehen. Die DVD wird automatisch ausgeworfen, also tu deine Ubuntu-DVD
-          zurück in die Hülle und lege die Windows-DVD ein. Schliesse das
+          zurück in die Hülle und lege die Windows-DVD ein. Schließe das
           CD-Fach, drücke ENTER und dann nochmals wiederholt F12.
         </p>
         <p>
           Dieses Mal jedoch geht es nicht um die Bootoptionen, also wähle die
-          letzte Option „Enter setup“. Navigiere zum Reiter „Security“, ändere
+          letzte Option „Enter setup“. Navigiere zur Registerkarte „Security“, ändere
           SecureBoot auf „Enabled“ und speichere mit F10. Nun startet das System
           neu und bootet von der Windows-DVD.
         </p>
         <p>
           Beim ersten Bildschirm, klickst Du einfach auf „Weiter“ und im zweiten
           auf „Jetzt installieren“. Du musst an dieser Stelle wohl deinen
-          Windows Lizenzschlüssel/Produktschlüssel eingeben. Wähle die Option
+          Windows Lizenzschlüssel eingeben. Wähle die Option
           „Benutzerdefiniert: Nur Windows installieren (fortgeschritten)“. Du
           wirst nun die gesamte Festplatte sehen, welche eine NTFS-Größe von
           698GB haben sollte. Das ist offensichtlich deine Festplatte, also
@@ -153,10 +153,10 @@
           Menü mit F12.
         </p>
         <p>
-          Gehe nun wieder ins „System Setup“, navigiere dann zum
-          „Security“-Reiter und setze Secureboot auf Disabled. Dieser Schritt
+          Gehe nun wieder ins „System Setup“, navigiere dann zur
+          „Security“-Registerkarte und setze Secureboot auf Disabled. Dieser Schritt
           ist sehr wichtig, wird jedoch später erklärt, also drücke F10 und
-          speichere. Drücke den F12-Knopf nochmals wiederholt und boote von der
+          speichere. Drücke den F12-Knopf nochmals wiederholt und starte von der
           DVD. Nun erscheint das Linux-Menü. Dieses Mal wählst Du natürlich
           „Install Ubuntu“.
         </p>
@@ -199,9 +199,9 @@
           installieren. Keine davon führte jedoch zum Erfolg. Es gab mehrere
           Berichte von Leuten, die Probleme mit Linux/Windows 8
           Dualbootinstallationen haben, was sehr wahrscheinlich etwas mit UEFI
-          und dem Secureboot-Feature zu tun hat.
+          und der Secureboot-Funktion zu tun hat.
         <p>
-          Letzte Aktualisierung: 18.04.2019
+          Letzte Aktualisierung: 19.02.2020
         </p>
         <a href="#top">An den Anfang dieser Seite zurückkehren</a>
     </div>

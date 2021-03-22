@@ -9,7 +9,7 @@
   <body>
     <div id="header">
       <h1>~christianheinrichs.gitlab.io</h1>
-      Language: <a href="#">de</a> / <a href="/articles/the-identicon-quest.html">en</a> / <a href="/ru/index.html">ru</a>
+      Language: <a href="#">de</a> / <a href="/articles/the-identicon-quest.html">en</a> / <a href="#">ru</a>
     </div>
     <div id="navigation">
       <ul>
@@ -40,7 +40,7 @@
       <p>
         So, for a long time I have been trying to find the perfect avatar to use
         across all of my personal internet accounts. To most people this
-        probably doesn't seem like a big deal and in all honesty, it isn't. It's
+        probably doesn’t seem like a big deal and in all honesty, it isn’t. It’s
         just one of those trivial things that, for some reason, start making
         your brain itch. Usually, I would stick to a QR code generated via the GUI
         tool QtQr, where my full name, email address and location (and some time
@@ -51,7 +51,7 @@
       <p>
         However, somewhere along the way I started reading about Gravatars,
         Identicons, people creating their own icons and what not and that made
-        me think. Since I don't possess the visual artistic skills to create my
+        me think. Since I don’t possess the visual artistic skills to create my
         own avatar, I started to dig in those topics and was somewhat
         overwhelmed in the beginning. In terms of generating Gravatars, the
         procedure is to calculate a MD5 sum of your email address (which must be
@@ -87,12 +87,12 @@
       <p>
         Without the <i><b>d</b></i> parameter however, that URL is useless, at least
         visually speaking. When you have finally constructed your personal
-        Gravatar URL, you can familiarize yourself with the parameters. Let's do
+        Gravatar URL, you can familiarize yourself with the parameters. Let’s do
         this step by step, alphabetically. The <i><b>d</b></i> parameter accepts 8 values
         which are 404, blank, identicon, monsterid, mp, robohash, retro and
         wavatar. Depending on what value you supply, the image will change
         either to a 404 not found message, a blank image, an identicon, a
-        Monster ID, a generic “mystery person”, a robohash, a retro pixelated
+        Monster ID, a generic ‘mystery person’, a robohash, a retro pixelated
         image or a wavatar. The <i><b>f</b></i> parameter (as in force), if set to y
         (as in yes), will force the image to always load the default blue and
         white Gravatar image. Now the <i><b>r</b></i> parameter is where it gets a little
@@ -100,7 +100,7 @@
         parameter the value <i><b>g</b></i>, <i><b>pg</b></i>, <i><b>r</b></i>
         or <i><b>x</b></i>. Last, but not least there is the <i><b>s</b></i>
         parameter to tell Gravatar what size the requested image should be. Note
-        however, that the maximum value is capped at 2048 pixels. If you're
+        however, that the maximum value is capped at 2048 pixels. If you’re
         interested, read more about the workings of Gravatar
         <a href="https://en.gravatar.com/site/implement/images/">here</a>.
       </p>
@@ -118,13 +118,13 @@
         its own version of identicons (which use a completely different
         algorithm) back in 2013. Instead of using the MD5 hash of your email
         address, it instead hashes your user ID (i.e. username) and flips so
-        called “pixel switches” depending on even and odd values.
+        called ‘pixel switches’ depending on even and odd values.
       </p>
       <p>
         The StackExchange network goes even further and in addition to the MD5
         sum uses a salt for security reasons according to
         <a href="https://meta.stackexchange.com/questions/204523/unexpectedly-changing-identicon/204540#204540">m0sa</a>.
-        If you're not registered with an email address on their website, they
+        If you’re not registered with an email address on their website, they
         create an identicon based on your last known IP address which is
         explained <a href="https://meta.stackexchange.com/questions/17443/how-is-the-default-user-avatar-generated/17444#17444">here</a>.
         This, I assume, is also hashed and salted.
@@ -136,14 +136,14 @@
         although it would be nice if that website provides a remote URL function
         sometime in the future instead of demanding the user to download an
         image just to upload it. GitLab automatically detected my correct
-        Gravatar identicon when I didn't provide an image and the size defaults
+        Gravatar identicon when I didn’t provide an image and the size defaults
         to 800x800 pixels thanks to the s=800 parameter in the URL. There are
         some exceptions though. On BitBucket, I am using an automatically
         generated image of my initials. On GitHub, I use a GitHub identicon. On
         the StackExchange network, my identicon is completely different from
         what it should be, which is most likely explained by the fact that they
         combine the actual checksum with a random salt value, probably one of
-        the most interesting approaches to the “Identicon problem”. In addition,
+        the most interesting approaches to the ‘Identicon problem’. In addition,
         it enhances security.
       </p>
 
@@ -156,10 +156,10 @@
       </p>
 
       <p>
-        What's your opinion on this topic and how do you handle your personal user avatars?
+        What’s your opinion on this topic and how do you handle your personal user avatars?
       </p>
       <p>
-        Last update: 17/07/2019
+        Last update: 22/03/2021
       </p>
     </div>
     <div id="footer"></div>

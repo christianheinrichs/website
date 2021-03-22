@@ -9,7 +9,7 @@
   <body>
     <div id="header">
       <h1>~christianheinrichs.gitlab.io</h1>
-      Language: <a href="/de/artikel/nibobee-bibliothek-unter-linux.html">de</a> / <a href="/articles/nibobee-library-on-linux.html">en</a> / <a href="/ru/index.html">ru</a>
+      Language: <a href="/de/artikel/nibobee-bibliothek-unter-linux.html">de</a> / <a href="/articles/nibobee-library-on-linux.html">en</a> / <a href="#">ru</a>
     </div>
     <div id="navigation">
       <ul>
@@ -38,12 +38,12 @@
         Getting the NIBObee library to work on Linux
       </h2>
       <p>
-        I simply wrote this tutorial, because I didn't find any NIBObee library
+        I simply wrote this tutorial, because I didn’t find any NIBObee library
         installation tutorial for Linux. The system I am using here is Ubuntu
         14.04 LTS Trusty Tahr. If you use Debian, you should get along well with
         this tutorial. If you have bought a NIBObee robot, you most likely got
         it with a CD. The only relevant folder you will need for this is
-        “linux”.
+        ‘linux’.
       </p>
       <p>
         Open the root directory of the CD-ROM and look at the content. You will
@@ -85,7 +85,7 @@
         </div>
         <p>
           Assuming you are using the CD, type the following commands to change
-          into the CD-ROM directory and then copy the “nibobeelib” tar file to
+          into the CD-ROM directory and then copy the ‘nibobeelib’ tar file to
           your newly created directory:
         </p>
         <div class="codeblock">
@@ -109,7 +109,7 @@
           makers of the CD packaged the include directory for Linux differently
           as they did for Windows. The include directory is in fact there! But
           it is located in the src folder and called nibobee instead of include.
-          But don't worry, this problem will get solved in a few moments.
+          But don’t worry, this problem will get solved in a few moments.
         </p>
         <p>
           If you now check the directory, you will find the folders doc, hex,
@@ -145,7 +145,7 @@
         <p>
           Now you have all files you need, nicely organized in the /opt/ folder
           of your Linux distribution.<br>
-          Let's copy over a program from the /opt/nibobeelib/ folder and change
+          Let’s copy over a program from the /opt/nibobeelib/ folder and change
           into it:
         </p>
         <div class="codeblock">
@@ -255,15 +255,15 @@
           I changed the relative paths so that they point to our
           /opt/nibobeelib/ directory. Why? This way we can compile the C source
           code from any folder location without problems. Furthermore, I
-          modified the “clean” function to also delete .xhex files, as the
-          default Makefile doesn't do that. By now, you should have replaced the
+          modified the ‘clean’ function to also delete .xhex files, as the
+          default Makefile doesn’t do that. By now, you should have replaced the
           original Makefile with the modified version.
         </p>
         <p>
           Alright, before we compile the program1.c program, we have to first
           transfer a .hex file which calibrates the odometry sensors of the
           robot.<br>
-          First make a new project directory called “calibration”:
+          First make a new project directory called ‘calibration’:
         </p>
         <div class="codeblock">
           <code>
@@ -282,12 +282,12 @@
           Now, download the script
           <a href="https://gist.github.com/christianheinrichs/ab750c916ef11d42d5de/download">
             here
-          </a> and put it into the “calibration” folder or copy and paste the
+          </a> and put it into the ‘calibration’ folder or copy and paste the
           following code into a file called calibrate.sh,
           <br>
 
           which should be saved in the just recently mentioned folder
-          “calibration”:
+          ‘calibration’:
         </p>
         <div class="codeblock">
           <code>
@@ -309,7 +309,7 @@
           For this script, I just took the values and commands of the default
           Makefile and adapted them to a .hex file, because nothing has to be
           compiled. Okay, flip on the power switch of your NIBObee and connect
-          it via USB to your computer or laptop, then go into the “calibration”
+          it via USB to your computer or laptop, then go into the ‘calibration’
           directory and transfer the calibration file to the robot with the
           following 3 commands:
         </p>
@@ -359,13 +359,13 @@
           </code>
         </div>
         <p>
-          When it's finished you should see the red LED1 blinking constantly in
+          When it’s finished you should see the red LED1 blinking constantly in
           the same pattern. Congratulations, you successfully installed the
           NIBObee library on Linux, learned a little bit about Makefile
           debugging, calibrated your NIBObee robot, compiled and transferred
           your first program to the robot!
         <p>
-          Last update: 18/04/2019
+          Last update: 22/03/2021
         </p>
         <a href="#top">Go to beginning of this page</a>
     </div>

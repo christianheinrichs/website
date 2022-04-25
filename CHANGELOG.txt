@@ -1,0 +1,293 @@
+Version 13.6.2014-r1
+- Add README.md
+
+Version 13.6.2014-r2
+- Add remaining web content
+
+Version 13.6.2014-r3
+- Add download links to the NIBObee library tutorial
+
+Version 16.6.2014-r1
+- Escape less-than characters and greater-than characters
+- Point stylesheet reference to absolute remote path of the website
+
+Version 16.6.2014-r2
+- Add article publishing date
+- Add GitHub pages link
+- Remove color attribute from <span> element
+- Remove unmatched <div> tag
+
+Version 16.6.2014-r3
+- Translate website into the German language
+- Add missing absolute links
+- Add links to switch between English and German
+
+Version 16.6.2014-r4
+- Correct links not pointing to the German NIBObee article
+
+Version 19.6.2014-r1
+- Publish ‘How to configure Ubuntu/Windows 8.1 dualboot on a Toshiba Satellite
+  L870-177’
+- Update stylesheets
+- Update NIBObee article
+- Switch ‘Times New Roman’ font to serif
+- Clean up stylesheet
+
+Version 19.6.2014-r2
+- Add link to new article
+- Correct links
+
+Version 1.7.2014-r1
+- Translate ‘How to configure Ubuntu/Windows 8.1 dualboot on a Toshiba
+  Satellite L870-177’ into the German language
+- Add QR code favicon image file
+- Add Bitbucket link
+- Add missing linebreak to a codeblock
+- Delete unnecessary stylesheet
+- Remove font-family from the following elements: <body>, <li>, <p>
+
+Version 1.7.2014-r2
+- Add missing favicon and reset README
+
+Version 19.7.2014
+- Rewrite German articles
+- Remove ‘Navigation’ heading
+
+Version 25.7.2014
+- Add PGP key
+- Add TODO file
+- Fix warning message size
+
+Version 29.8.2014-r1
+- Add more account links
+- Add missing paragraph closing tag to contact page
+- Fix list background color and foreground color when hovering
+- Create new QR code favicon
+- Correct grammatical and stylistic errors
+- Improve articles
+- Write and translate new article: ‘Replacing Ubuntu with Debian’
+- Change link color
+
+Version 29.8.2014-r2
+- Correct favicon and stylesheet links
+
+Version 8.9.2014
+- Reduce usage of <br> tag line breaks
+- Change content background color
+
+Version 20.12.2014
+- Improve design
+- Add .gitignore file
+
+Version 30.12.2014-r1
+- Replace account link with icons
+
+Version 30.12.2014-r2
+- Checkout image files
+
+Version 14.10.2016-r1
+- Remove `master-dev` branch
+- Move http:// links https://
+
+Version 14.10.2016-r2
+- Change README text
+- Integrate CREDITS file into accounts HTML page
+
+Version 3.5.2017-r1
+- Delete CREDITS file and move its contents to accounts.html, de/accounts.html
+- Create img folder and move icons there
+
+Version 3.5.2017-r2
+- Fix favicon location
+
+Version 12.8.2017-r1
+- Minor corrections in ‘Replacing Ubuntu with Debian’ article
+- Replace CSS color keywords with hexadecimal RGB values
+- Minor corrections on the ‘About’ page
+- Update contact page
+- Update QR code favicon
+- Delete unused CSS file in ‘de’ folder
+- Replace some local links with remote links
+- Update index page greeting text
+
+Version 12.8.2017-r2
+- Fix three article link typos
+
+Version 12.9.2017
+- Add ‘lang’ HTML attribute
+- Delete nibobee.html
+- Delete de/about.html
+- Delete de/artikel/nibobee.html
+
+Version 24.9.2017-r1
+- Delete old PGP key
+
+Version 24.9.2017-r2
+- Paragraphs are now more compact
+
+Version 24.9.2017-r3
+- Replace quotation marks
+- Fix typo
+
+Version 16.10.2017-r1
+- Update contact page
+
+Version 16.10.2017-r2
+- Refine compact source code readability
+
+Version 16.10.2017-r3
+- Replace dumb quotes
+
+Version 16.10.2017-r4
+- Move four links to HTTPS
+
+Version 16.10.2017-r5
+- Update Codecademy and Launchpad account URLS
+- Update .gitignore
+
+Version 28.11.2017
+- Use two space indentation instead of four space indentation for HTML files
+- Remove line breaks from <li> elements
+
+Version 11.12.2017
+- Make line breaks compatible with two space indentation
+
+Version 14.7.2018-r1
+- Fix W3C mailto validation error via percent encoding
+- Move icon credits from HTML to CREDITS.txt file
+
+Version 14.7.2018-r2
+- Convert links on same domain from absolute to relative paths
+
+Version 15.7.2018
+- Make CSS file use two indentation spaces instead of four 
+
+Version 1.5.2019-r1
+- Update .gitignore
+- Remove Launchpad icon
+- Add Russian version
+- Move footer content into about page text
+- Remove <h3> elements from articles page
+- Minor article corrections
+- Update email address, restructure contact page
+- Update projects page
+- Update about page
+- Remove favicon
+- Shorten welcome text
+- Change terminal style color via CSS
+
+Version 1.5.2019-r2
+- Update official Vim website URL
+- Move LXDE link to HTTPS
+- Add missing article links to articles.html (Russian version)
+
+Version 6.6.2019-r1
+- Add YAML file for continuous integration
+- Update GitHub and GitLab icon
+- Correct root relative links
+
+Version 6.6.2019-r2
+- Move GitHub pages links to GitLab pages
+
+Version 14.6.2019-r1
+- Use Gravatar identicon as favicon
+
+Version 14.6.2019-r2
+- Escape ‘&’ symbol within ‘href’ attribute
+- Fix <p> closing tag in three files
+
+Version 17.6.2019-r1
+- Publish new article and move favicon back to local
+
+Version 17.6.2019-r2
+- Add link for new article
+
+Version 2.8.2019-r1
+- Publish ‘Protectors and providers’
+- Convert US date notation to UK format
+
+Version 2.8.2019-r2
+- Point favicon to root relative URL
+
+Version 8.9.2019
+- Fix article links, use Arial font in header
+
+Version 7.10.2019-r1
+- Publish translation article
+- Fix article title
+
+Version 7.10.2019-r2
+- Add link for newest article
+
+Version 7.10.2019-r3
+- Add missing GitLab icon
+
+Version 1.2.2020-r1
+- Publish ‘My kind of love’
+
+Version 1.2.2020-r2
+- Add missing HTML paragraph elements
+
+Version 1.2.2020-r3
+- Insert line breaks
+
+Version 1.2.2020-r4
+- Improve ‘Translation update’ slightly
+
+Version 19.2.2020-r1
+- Remove anglicisms where possible
+- Correct minor mistakes
+
+Version 19.2.2020-r2
+- Convert numbers into words
+- Keep source code compact
+
+Version 3.5.2020-r1
+- Publish ‘Suffocation’
+
+Version 3.5.2020-r2
+- Add missing link for previously published article
+
+Version 8.11.2020-r1
+- Publish ‘Uninvited guest’
+
+Version 8.11.2020-r2
+- Remove unneeded whitespace
+- Add article link
+
+Version 8.11.2020-r3
+- Fix <title> tag and insert linebreaks into paragraphs
+
+Version 17.11.2020
+- Publish ‘Fire and ice’
+- Add related link
+
+Version 28.2.2021
+- Slightly revise ‘Protectors and providers’
+
+Version 3.3.2021-r1
+- Publish ‘Point of no return’
+
+Version 3.3.2021-r2
+- Fix article links
+
+Version 22.3.2021
+- Fix language links
+- Replace apostrophes
+- Replace double quotation marks
+- Replace simple quotation marks
+- Fix closing bracket
+
+Version 12.5.2021
+- Update Codecademy profile link
+
+Version 6.6.2021
+- Revise poems
+- Use a different date format
+
+Version 25.4.2022
+- Rewrite projects page
+- Add changelog
+- Add README.txt
+- Update README.md
+- Update language links

@@ -130,6 +130,10 @@ ul {
   text-align: center;
 }
 
+#projlist li {
+  margin-bottom: 12px;
+}
+
 #warning {
   background-color: #000000;
   color: #ffff00;

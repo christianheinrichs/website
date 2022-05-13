@@ -291,3 +291,8 @@ Version 25.4.2022
 - Add README.txt
 - Update README.md
 - Update language links
+
+Version 13.5.2022
+- Create more space between project list items
+- Remove unneeded <ul> elements
+- Fix language link navigation typo in accounts.html

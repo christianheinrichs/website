@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>On date versioning</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css" />
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <div id="header">
+      <h1>~christianheinrichs.gitlab.io</h1>
+      Language: <a href="/articles/on-date-versioning.html">English</a> / <a href="#">German</a> / <a href="#">Russian</a>
+    </div>
+    <div id="navigation">
+      <ul>
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/articles.html">Articles</a>
+        </li>
+        <li>
+          <a href="/projects.html">Projects</a>
+        </li>
+        <li>
+          <a href="/accounts.html">My accounts</a>
+        </li>
+        <li>
+          <a href="/contact.html">Contact</a>
+        </li>
+        <li>
+          <a href="/about.html">About this website</a>
+        </li>
+      </ul>
+    </div>
+    <div id="content">
+      <h2>
+        On date versioning
+      </h2>
+      <p>
+        What do you do, if you have a couple of personal coding projects lying
+        about, want to assign version numbers to them, yet you have never
+        learned how classic version numbering systems work. Well, you either
+        learn that system or use something simpler.
+      </p>
+
+      <p>
+        Over the years, an increasing number of people started adapting a
+        versioning system consisting of a day, a month and a year. In layman’s
+        terms, the date a certain commit was released/pushed. Although I’d like
+        to use the classic versioning system as in 0.1.2 etc., I never really
+        understood the logic behind it. This is one of the reasons why in my
+        personal projects I currently use the versioning format dd.mm.yyyy,
+        which for example would look like software version 1.2.2000. Should
+        releases/commits occur on the same day, I simply append a dash/minus
+        followed by the letter <i>r</i> and a number representing the release number
+        of a specific day, e.g.
+      </p>
+
+      <table>
+        <tr>
+          <th>Date versioning system (dd.mm.yyyy)</th>
+          <th>Possible representation of classic/semantic versioning</th>
+        </tr>
+        <tr>
+          <td>1.1.2000</td>
+          <td>0.1.0</td>
+        </tr>
+        <tr>
+          <td>2.1.2000</td>
+          <td>0.2.0</td>
+        </tr>
+        <tr>
+          <td>3.1.2000-r1</td>
+          <td>0.2.1</td>
+        </tr>
+        <tr>
+          <td>3.1.2000-r2</td>
+          <td>0.2.2</td>
+        </tr>
+        <tr>
+          <td>3.1.2000-r3</td>
+          <td>0.2.3</td>
+        </tr>
+      </table>
+
+      <p>
+        I have thought about this a lot and want to present you the many
+        variations of that system. For example, how about swapping the <i>r</i>
+        letter for a <i>c</i>, as in (c)ommit instead of (r)elease. It is also
+        common practice to reverse the order. I personally think this is done to
+        have the first number increasing last, just like with the classic
+        versioning system. This in turn is probably done in order to create the
+        illusion of a date versioning system close to the semantic/classic
+        versioning system. To visualise this, take a look:
+      </p>
+
+      <table>
+        <tr>
+          <th>Date versioning system (yyyy.mm.dd)</th>
+          <th>Possible representation of classic/semantic versioning</th>
+        </tr>
+        <tr>
+          <td>2000.1.1</td>
+          <td>0.0.1</td>
+        </tr>
+        <tr>
+          <td>2000.1.2</td>
+          <td>0.0.2</td>
+        </tr>
+        <tr>
+          <td>2000.1.3</td>
+          <td>0.0.3</td>
+        </tr>
+        <tr>
+          <td>2000.2.1</td>
+          <td>0.1.0</td>
+        </tr>
+        <tr>
+          <td>2001.1.1</td>
+          <td>1.0.0</td>
+        </tr>
+      </table>
+
+      <p>
+        Now please bear in mind that the above is just a mock example. I will
+        use three actual projects as real examples here with each of those
+        having its own implementation of the date versioning system. ‘Dagon’,
+        ‘HTTPSE’ and ‘Sludge Life’.
+      </p>
+
+      <p>
+        The video game ‘Dagon’ uses the date versioning system in the format of:<br><br>
+        <code>{string} yyyy.mm.dd:{build}</code>
+      </p>
+
+      <p>
+        The string placeholder is simply the word ‘Build’ and the number
+        following the colon symbol I assume represents the actual build number.
+        In this case, 031 or thirty-first build.
+      </p>
+
+      <p>
+        Dagon:<br>
+        Build 2021.10.27:031
+      </p>
+
+      <p>
+        The latest releases of the ‘HTTPS Everywhere’ browser extension use the
+        format yyyy.mm.dd
+      </p>
+
+      <p>
+        HTTPS Everywhere:<br>
+        2022.5.24
+      </p>
+
+      <p>
+        While the video game ‘Sludge Life’ uses a format like Vyymmdd, which
+        then looks like the following.
+      </p>
+
+      <p>
+        Sludge Life:<br>
+        - V200803<br>
+        - V200519
+      </p>
+      <p>
+        So this is yet another approach. I have also thought about applying the
+        Roman numbering system as a replacement for the <i>c</i> and <i>r</i>
+        suffix notation looking like:
+      </p>
+      <table>
+        <tr>
+          <th>Lowercase version</th>
+          <th>Uppercase version</th>
+        </tr>
+        <tr>
+          <td>1.1.2000</td>
+          <td>1.1.2000</td>
+        </tr>
+        <tr>
+          <td>2.1.2000</td>
+          <td>2.1.2000</td>
+        </tr>
+        <tr>
+          <td>3.1.2000-i</td>
+          <td>3.1.2000-I</td>
+        </tr>
+        <tr>
+          <td>3.1.2000-ii</td>
+          <td>3.1.2000-II</td>
+        </tr>
+        <tr>
+          <td>3.1.2000-iii</td>
+          <td>3.1.2000-III</td>
+        </tr>
+      </table>
+      <p>
+        From a date format perspective, dd.mm.yyyy looks more natural. From a
+        programming/software angle however, dd.mm.yyyy looks unnatural, simply
+        because the first number is increasing before the others.
+      </p>
+      <p>
+        In comparison:
+      </p>
+      <table>
+        <tr>
+          <th>Date versioning system (dd.mm.yyyy)</th>
+          <th>Date versioning system (yyyy.mm.dd)</th>
+        </tr>
+        <tr>
+          <td>1.1.2000</td>
+          <td>2000.1.1</td>
+        </tr>
+        <tr>
+          <td>2.1.2000</td>
+          <td>2000.1.2</td>
+        </tr>
+        <tr>
+          <td>3.1.2000</td>
+          <td>2000.1.3</td>
+        </tr>
+        <tr>
+          <td>1.2.2000</td>
+          <td>2000.2.1</td>
+        </tr>
+        <tr>
+          <td>1.2.2001</td>
+          <td>2001.2.1</td>
+        </tr>
+      </table>
+      <p>
+        Then there is
+        of course an application of the above with yet more variations. Instead
+        of omitting zeroes you could leave them in like so:
+      </p>
+      <table>
+        <tr>
+          <th>Date versioning system (dd.mm.yyyy)</th>
+          <th>Date versioning system (yyyy.mm.dd)</th>
+        </tr>
+        <tr>
+          <td>01.01.2000</td>
+          <td>2000.01.01</td>
+        </tr>
+        <tr>
+          <td>02.01.2000</td>
+          <td>2000.01.02</td>
+        </tr>
+        <tr>
+          <td>03.01.2000</td>
+          <td>2000.01.03</td>
+        </tr>
+        <tr>
+          <td>01.02.2000</td>
+          <td>2000.02.01</td>
+        </tr>
+        <tr>
+          <td>01.02.2001</td>
+          <td>2001.02.01</td>
+        </tr>
+      </table>
+      <p>
+        Yet another method is the leaving out of the first two yy digits as
+        in:
+      </p>
+      <table>
+        <tr>
+          <th>Date versioning system (dd.mm.yyyy)</th>
+          <th>Date versioning system (yyyy.mm.dd)</th>
+        </tr>
+        <tr>
+          <td>1.1.00</td>
+          <td>00.1.1</td>
+        </tr>
+        <tr>
+          <td>2.1.00</td>
+          <td>00.1.2</td>
+        </tr>
+        <tr>
+          <td>3.1.00</td>
+          <td>00.1.3</td>
+        </tr>
+        <tr>
+          <td>1.2.00</td>
+          <td>00.2.1</td>
+        </tr>
+        <tr>
+          <td>1.2.01</td>
+          <td>01.2.1</td>
+        </tr>
+      </table>
+      <p>
+        This makes sense only in a century/centurial context and is therefore
+        not futureproof, because after the year 2099, the last two year digits
+        obviously reset and there is no safe way of referring to a specific
+        version between two centuries. Let’s have a look at a piece of software
+        released on the first of January.
+      </p>
+      <p>
+        Mock software released on 1 January 2022 would be labeled 1.1.22 or
+        22.1.1. If that software by some miracle is still alive and gets a
+        release on the very same day, in the next century, then we have the
+        following mess: Mock software released on 1 January 2122 also labeled
+        1.1.22 or 22.1.1.
+      </p>
+      <p>
+        Effectively, this could be described as a versioning system collision
+        between two centuries. The only remedy in this case is either writing
+        out the year completely or dropping this versioning system and use the
+        classic one.
+      </p>
+      <p>
+        On a conclusional note, I think that the date versioning system is a
+        quick and easy method for people who don’t have the time or motivation
+        to learn semantic versioning. From a programmatic point of view though,
+        people should probably adhere to semantic versioning for the sake of
+        consistency and the fact that semantic versioning is more widely
+        implemented. Ultimately, the decision is made by you.
+      </p>
+      <p>
+        Last update: 18 February 2023
+      </p>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>

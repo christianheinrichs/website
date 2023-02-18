@@ -296,3 +296,7 @@ Version 13.5.2022
 - Create more space between project list items
 - Remove unneeded <ul> elements
 - Fix language link navigation typo in accounts.html
+
+Version 18.2.2023
+- Publish ‘On date versioning’
+- Make <table> elements inside content div use same colour as paragraphs

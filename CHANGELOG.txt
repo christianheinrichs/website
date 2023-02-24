@@ -300,3 +300,9 @@ Version 13.5.2022
 Version 18.2.2023
 - Publish ‘On date versioning’
 - Make <table> elements inside content div use same colour as paragraphs
+
+Version 24.2.2023
+- On date versioning: Add software project links
+- On date versioning: Minor text additions and corrections
+- On date versioning: Break new lines at 80
+- On date versioning: Separate HTML elements inside content div

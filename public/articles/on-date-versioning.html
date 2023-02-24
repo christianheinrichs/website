@@ -37,6 +37,7 @@
       <h2>
         On date versioning
       </h2>
+
       <p>
         What do you do, if you have a couple of personal coding projects lying
         about, want to assign version numbers to them, yet you have never
@@ -53,8 +54,8 @@
         personal projects I currently use the versioning format dd.mm.yyyy,
         which for example would look like software version 1.2.2000. Should
         releases/commits occur on the same day, I simply append a dash/minus
-        followed by the letter <i>r</i> and a number representing the release number
-        of a specific day, e.g.
+        followed by the letter <i>r</i> and a number representing the release
+        number of a specific day, e.g.
       </p>
 
       <table>
@@ -125,8 +126,10 @@
       <p>
         Now please bear in mind that the above is just a mock example. I will
         use three actual projects as real examples here with each of those
-        having its own implementation of the date versioning system. ‘Dagon’,
-        ‘HTTPSE’ and ‘Sludge Life’.
+        having its own implementation of the date versioning system.
+        <a href="https://bitgolemgames.com/sheet.php?p=dagon_">Dagon</a>,
+        <a href="https://www.eff.org/https-everywhere">HTTPSE</a> and
+        <a href="https://devolverdigital.itch.io/sludgelife">Sludge Life</a>.
       </p>
 
       <p>
@@ -136,8 +139,10 @@
 
       <p>
         The string placeholder is simply the word ‘Build’ and the number
-        following the colon symbol I assume represents the actual build number.
-        In this case, 031 or thirty-first build.
+        following the colon mark I assume represents the actual build number. In
+        this case, 031 or thirty-first build. This version number can be seen on
+        the bottom of the in-game main menu. In this case a fresh install of the
+        GOG offline installer for Windows was used.
       </p>
 
       <p>
@@ -152,7 +157,7 @@
 
       <p>
         HTTPS Everywhere:<br>
-        2022.5.24
+        <a href="https://github.com/EFForg/https-everywhere/releases/tag/2022.5.24">2022.5.24</a>
       </p>
 
       <p>
@@ -165,11 +170,13 @@
         - V200803<br>
         - V200519
       </p>
+
       <p>
         So this is yet another approach. I have also thought about applying the
         Roman numbering system as a replacement for the <i>c</i> and <i>r</i>
         suffix notation looking like:
       </p>
+
       <table>
         <tr>
           <th>Lowercase version</th>
@@ -196,14 +203,17 @@
           <td>3.1.2000-III</td>
         </tr>
       </table>
+
       <p>
         From a date format perspective, dd.mm.yyyy looks more natural. From a
         programming/software angle however, dd.mm.yyyy looks unnatural, simply
         because the first number is increasing before the others.
       </p>
+
       <p>
         In comparison:
       </p>
+
       <table>
         <tr>
           <th>Date versioning system (dd.mm.yyyy)</th>
@@ -230,11 +240,12 @@
           <td>2001.2.1</td>
         </tr>
       </table>
+
       <p>
-        Then there is
-        of course an application of the above with yet more variations. Instead
-        of omitting zeroes you could leave them in like so:
+        Then there is of course an application of the above with yet more
+        variations. Instead of omitting zeroes you could leave them in like so:
       </p>
+
       <table>
         <tr>
           <th>Date versioning system (dd.mm.yyyy)</th>
@@ -261,14 +272,15 @@
           <td>2001.02.01</td>
         </tr>
       </table>
+
       <p>
-        Yet another method is the leaving out of the first two yy digits as
-        in:
+        Yet another method is the leaving out of the first two yy digits as in:
       </p>
+
       <table>
         <tr>
-          <th>Date versioning system (dd.mm.yyyy)</th>
-          <th>Date versioning system (yyyy.mm.dd)</th>
+          <th>Date versioning system (dd.mm.yy)</th>
+          <th>Date versioning system (yy.mm.dd)</th>
         </tr>
         <tr>
           <td>1.1.00</td>
@@ -291,13 +303,16 @@
           <td>01.2.1</td>
         </tr>
       </table>
+
       <p>
         This makes sense only in a century/centurial context and is therefore
         not futureproof, because after the year 2099, the last two year digits
         obviously reset and there is no safe way of referring to a specific
-        version between two centuries. Let’s have a look at a piece of software
-        released on the first of January.
+        version between two centuries when applying the dd.mm.yy or yy.mm.dd
+        notation. Let’s have a look at a fictional piece of software released
+        on the first of January.
       </p>
+
       <p>
         Mock software released on 1 January 2022 would be labeled 1.1.22 or
         22.1.1. If that software by some miracle is still alive and gets a
@@ -305,12 +320,14 @@
         following mess: Mock software released on 1 January 2122 also labeled
         1.1.22 or 22.1.1.
       </p>
+
       <p>
-        Effectively, this could be described as a versioning system collision
-        between two centuries. The only remedy in this case is either writing
-        out the year completely or dropping this versioning system and use the
-        classic one.
+        Effectively, this could be described as a date versioning system
+        collision between two centuries. The only remedy in this case is either
+        writing out the year completely or dropping this versioning system and
+        use the classic one.
       </p>
+
       <p>
         On a conclusional note, I think that the date versioning system is a
         quick and easy method for people who don’t have the time or motivation
@@ -319,8 +336,9 @@
         consistency and the fact that semantic versioning is more widely
         implemented. Ultimately, the decision is made by you.
       </p>
+
       <p>
-        Last update: 18 February 2023
+        Last update: 24 February 2023
       </p>
     </div>
     <div id="footer"></div>
